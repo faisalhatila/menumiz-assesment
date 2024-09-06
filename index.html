@@ -127,6 +127,136 @@
             </li>
           </ul>
         </div>
+        <div class="dashboard-component">
+          <h1 class="component-title">Dashboard</h1>
+          <div class="component-row">
+            <div class="heatmap-component">
+              <div class="header-row">
+                <p class="component-title">Heatmap</p>
+                <div class="drodowns-component">
+                  <select>
+                    <option>SICKDAY</option>
+                    <option>BIRTHDAY</option>
+                    <option>FAMILYFUNCTION</option>
+                    <option>MATERNITY</option>
+                  </select>
+                  <select>
+                    <option>MARCH 2023</option>
+                    <option>APRIL 2023</option>
+                    <option>MAY 2023</option>
+                    <option>JUNE 2023</option>
+                  </select>
+                </div>
+              </div>
+              <div class="week-days-row">
+                <ul class="days-list" id="daysList">
+                  <li class="day-list-item">Mon</li>
+                  <li class="day-list-item">Tue</li>
+                  <li class="day-list-item">Wed</li>
+                  <li class="day-list-item">Thu</li>
+                  <li class="day-list-item active-day">Fri</li>
+                  <li class="day-list-item">Sat</li>
+                  <li class="day-list-item">Sun</li>
+                </ul>
+              </div>
+              <div class="data-row">
+                <div class="data-indicator-wrapper">
+                  <p class="indicator-name">Sick Leave</p>
+                  <div
+                    class="circular-progress"
+                    data-inner-circle-color="#1E1E1E"
+                    data-percentage="50"
+                    data-progress-color="#6E56E0"
+                    data-bg-color="#272727"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                  </div>
+                </div>
+                <div class="data-indicator-wrapper">
+                  <p class="indicator-name">Annual Leave</p>
+                  <div
+                    class="circular-progress"
+                    data-inner-circle-color="#1E1E1E"
+                    data-percentage="30"
+                    data-progress-color="#6E56E0"
+                    data-bg-color="#272727"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                  </div>
+                </div>
+                <div class="data-indicator-wrapper">
+                  <p class="indicator-name">Emergency Leave</p>
+                  <div
+                    class="circular-progress"
+                    data-inner-circle-color="#1E1E1E"
+                    data-percentage="20"
+                    data-progress-color="#6E56E0"
+                    data-bg-color="#272727"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="component-footer">
+                <p>Most popular day: Friday</p>
+              </div>
+            </div>
+            <div class="most-day-away-component">
+              <div class="header-row">
+                <p class="component-title">Most Days Away</p>
+                <div class="drodowns-component">
+                  <select>
+                    <option>MARCH 2023</option>
+                    <option>APRIL 2023</option>
+                    <option>MAY 2023</option>
+                    <option>JUNE 2023</option>
+                  </select>
+                </div>
+              </div>
+              <div class="data-component">
+                <ul class="most-day-away-list">
+                  <li class="most-day-away-list-item">
+                    <div class="user-name-pic">
+                      <img src="/assets/img/User2Avatar.png" />
+                      <p class="user-name">Mark Jacobs</p>
+                    </div>
+                    <p class="away-days-info">5.0 day(s)</p>
+                  </li>
+                  <li class="most-day-away-list-item">
+                    <div class="user-name-pic">
+                      <img src="/assets/img/User1Avatar.svg" />
+                      <p class="user-name">Charlie Kristen</p>
+                    </div>
+                    <p class="away-days-info">3.5 day(s)</p>
+                  </li>
+                  <li class="most-day-away-list-item">
+                    <div class="user-name-pic">
+                      <img src="/assets/img/User3Avatar.png" />
+                      <p class="user-name">Nur Fariha binti Maslan</p>
+                    </div>
+                    <p class="away-days-info">1.0 day(s)</p>
+                  </li>
+                  <li class="most-day-away-list-item">
+                    <div class="user-name-pic">
+                      <img src="/assets/img/User1Avatar.svg" />
+                      <p class="user-name">Nishant Talwar</p>
+                    </div>
+                    <p class="away-days-info">1.0 day(s)</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="component-footer">
+                <p>Total: 95 day(s)</p>
+              </div>
+            </div>
+            <div class="avatar-component">
+              <img src="/assets/img/User2Avatar.png" />
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script type="text/javascript" src="/assets/js/main.js"></script>

@@ -166,4 +166,45 @@ body{
             }
         }
     }
+    .main-content{
+        padding: 16px 40px;
+        color: #fff;
+        position: relative;
+        width: calc(100vw - 272px);
+        margin-left: 272px;
+    }
+    .tabs-row{
+        display: flex;
+        align-items: center;
+        top: 74px;
+        position: fixed;
+        background: #151515;
+        // background: #ccc;
+        width: calc(100% - 342px);
+        z-index: 1;
+        .tabs-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0px;
+            .tabs-list-item{
+                margin-right: 12px;
+                padding: 8px 8px 18px 8px;
+                position: relative;
+            }
+            .unread::after{
+                    content:'';
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: #FFD928;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+            }
+            .active{
+                border-bottom: solid 2px #6E56E0 !important;
+            }
+        }
+    }
 }

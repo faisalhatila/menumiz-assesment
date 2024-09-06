@@ -865,4 +865,100 @@ body{
             }
         }
     }
+    .notifications-component{
+        width: 464px;
+        min-height: calc(100vh - 90px);
+        padding: 0 24px 24px 24px;
+        border-left: solid 2px #272727;
+        position: fixed;
+        z-index: 1;
+        background-color: #151515;
+        right: 0px;
+        top: 70px;
+        .notify-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .mark-all-box{
+                display: flex;
+                align-items: center;
+                label{
+                    color:rgba(255, 255, 255, 0.65);
+                    font-family: Inter !important;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                    margin-right: 4px;
+            }
+            }
+        }
+        .notifications-list{
+            list-style: none;
+            padding: 0px;
+            overflow-y: auto;
+            max-height: 80vh;
+            .notifications-list-item{
+                background: #1E1E1E;
+                display: flex;
+                gap: 16px;
+                margin-bottom: 8px ;
+                border-radius: 12px;
+                padding: 16px;
+                .notification-user-avatar{
+                    min-width: 48px;
+                    position: relative;
+                    background: transparent;
+                    display: flex;
+                    justify-content: flex-end;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        position: relative;
+                        background: transparent;
+                    }
+                }
+                .active::before{
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #FFD928;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+                .notifications-content-component{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: transparent;
+                    gap: 12px;
+                    .notification-message{
+                        color: #FFF;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        margin: 0px;
+                        background: transparent;
+                        .user-name{
+                            font-weight: 700;
+                            background: transparent;
+                            margin-right: 8px;
+                        }
+                    }
+                    .notification-time{
+                        color: #ccc;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px;
+                        background: transparent
+                    }
+                }
+            }
+        }
+    }
 }

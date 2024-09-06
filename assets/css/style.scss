@@ -1,0 +1,115 @@
+* {
+    font-family: 'Urbanist', sans-serif;
+    font-optical-sizing: auto;
+  }
+  /*--------------------------------------------Topbar--------------------------------------------*/
+body{
+    background-color: #151515;
+} 
+.top-bar {
+    // position: sticky;
+    top: 0;
+    display: flex;
+    color: #fff;
+    padding: 0 40px;
+    border-bottom: solid 2px #272727;
+    background-color: #151515;
+    z-index: 1;
+    position: fixed;
+    width: calc(100% - 80px);
+    top: 0;
+    .logo-wrapper{
+        padding: 20px 16px 20px 0;
+        // width: 240px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo-box{
+            display: flex;
+            align-items: center;
+            p {
+                font-size: 23px;
+                font-weight: 900;
+                margin-left: 8px;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+        }
+    }
+    .top-bar-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        .title-component{
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 18px;
+            }
+            p{
+                color: #FFF;
+                font-family: Urbanist;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+            }
+        }
+        .actions-component{
+            display: flex;
+            align-items: center;
+            .search-bar-component{
+                display: flex;
+                align-items: center;
+                background: #272727;
+                border-radius: 28px;
+                padding: 8px 16px;
+                width: 280px;
+                input[type=search] {
+                    background: transparent;
+                    border: none;
+                    margin-left: 18px;
+                    width: 100%;
+                }
+                input[type=search]:focus{
+                    outline: none;
+                }
+            }
+            .filter-icon-component{
+                margin: 0 16px;
+            }
+            .notification-icon-component{
+                cursor: pointer;
+                background: #6E56E0;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    background: #6E56E0;
+                }
+                .unread-notification-indication-light{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #FFD928;
+                    position: absolute;
+                    top: 8px;
+                    right: 10px;
+                }
+
+            }
+            .account-action-component{
+                margin: 0 0 0 16px;
+            }
+        }
+    }
+
+}

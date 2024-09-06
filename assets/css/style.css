@@ -1,0 +1,113 @@
+* {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/*--------------------------------------------Topbar--------------------------------------------*/
+body {
+  background-color: #151515;
+}
+
+.top-bar {
+  top: 0;
+  display: flex;
+  color: #fff;
+  padding: 0 40px;
+  border-bottom: solid 2px #272727;
+  background-color: #151515;
+  z-index: 1;
+  position: fixed;
+  width: calc(100% - 80px);
+  top: 0;
+}
+.top-bar .logo-wrapper {
+  padding: 20px 16px 20px 0;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar .logo-wrapper .logo-box {
+  display: flex;
+  align-items: center;
+}
+.top-bar .logo-wrapper .logo-box p {
+  font-size: 23px;
+  font-weight: 900;
+  margin-left: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.top-bar .top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.top-bar .top-bar-content .title-component {
+  display: flex;
+  align-items: center;
+}
+.top-bar .top-bar-content .title-component img {
+  margin-right: 18px;
+}
+.top-bar .top-bar-content .title-component p {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.top-bar .top-bar-content .actions-component {
+  display: flex;
+  align-items: center;
+}
+.top-bar .top-bar-content .actions-component .search-bar-component {
+  display: flex;
+  align-items: center;
+  background: #272727;
+  border-radius: 28px;
+  padding: 8px 16px;
+  width: 280px;
+}
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=search] {
+  background: transparent;
+  border: none;
+  margin-left: 18px;
+  width: 100%;
+}
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=search]:focus {
+  outline: none;
+}
+.top-bar .top-bar-content .actions-component .filter-icon-component {
+  margin: 0 16px;
+}
+.top-bar .top-bar-content .actions-component .notification-icon-component {
+  cursor: pointer;
+  background: #6E56E0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.top-bar .top-bar-content .actions-component .notification-icon-component img {
+  width: 24px;
+  height: 24px;
+  background: #6E56E0;
+}
+.top-bar .top-bar-content .actions-component .notification-icon-component .unread-notification-indication-light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFD928;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+.top-bar .top-bar-content .actions-component .account-action-component {
+  margin: 0 0 0 16px;
+}/*# sourceMappingURL=style.css.map */

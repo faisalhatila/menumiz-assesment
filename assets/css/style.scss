@@ -465,4 +465,404 @@ body{
             }
         }
     }
+    .leave-requests-component{
+        display: flex;
+        flex-direction: column;
+        .component-title-row{
+            display: flex;
+            justify-content: space-between;
+            .component-title{
+                color: #FFF;
+                font-family: Urbanist;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 125%;
+            }
+            .request-view-type-buttons-component{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .list-view,.month-view{
+                    cursor: pointer;
+                    border: none;
+                    color: #898989;
+                    font-family: Urbanist;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%; /* 21px */
+                    background: #272727;
+                    width: 120px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+                .list-view{
+                    border-top-left-radius: 16px;
+                    border-bottom-left-radius: 16px;
+                }
+                .month-view{
+                    border-top-right-radius: 16px;
+                    border-bottom-right-radius: 16px;
+                }
+                .active {
+                    color: #FFF !important;
+                    font-weight: 700 !important;
+                    background: #6E56E0 !important;
+
+                }
+            }
+        }
+        .component-row{
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            .heatmap-component{
+                background: #1E1E1E;
+                flex: 1;
+                border-radius: 8px;
+                overflow: hidden;
+                .header-row{
+                    background: transparent;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: solid 2px #272727;
+                    padding: 16px 16px 10px 24px;
+                    .component-title{
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Urbanist;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 100%;
+                        margin: 0px;
+                    }
+                    .drodowns-component{
+                        display: flex;
+                        align-items: center;
+                        select {
+                            background-color: transparent;
+                            border: none;
+                            color: #898989;
+                            text-align: center;
+                            font-family: Urbanist;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 100%; /* 15px */
+                            text-transform: uppercase;
+                        }
+                        select:active{
+                            outline: none;
+                        }
+                    }
+                }
+                .week-days-row{
+                    padding: 10px 16px 10px 24px;
+                    overflow: hidden;
+                    .days-list{
+                        display: flex;
+                        list-style: none;
+                        border:solid 1px #272727;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        padding: 0px;
+                        .day-list-item{
+                            flex:1;
+                            border-right: solid 1px #272727;
+                            padding: 10px;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                        .active-day{
+                            background: #C33535;
+                        }
+                    }
+                    
+                }
+                .data-row{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 16px 10px 24px;
+                    .leave-requests-table{
+                        min-width: 100%;
+                        .table-head-row {
+                            border-radius: 8px;
+                            background-color: #272727;
+                            padding: 12px 20px;
+
+                        }
+                        .table-head-row,.table-body-row{
+                            td {
+                                padding: 10px;
+                                .sort-icon {
+                                    margin-left: 10px;
+                                }
+                            }
+                            .check-col{
+                                border-top-left-radius: 20px;
+                                border-bottom-left-radius: 20px;
+                                width: 10%;
+                                input[type=checkbox] {
+                                    margin-right: 10px;
+                                }
+                            }
+                            .pending-request,.approved-request{
+                                position: relative;
+                            }
+                            .pending-request::after{
+                                position: absolute;
+                                content: '';
+                                top: 25px;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background: #FFD928;
+                            }
+                            .approved-request::after{
+                                position: absolute;
+                                content: '';
+                                top: 25px;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background: green;
+                            }
+                            .name-col{
+                                // width: 30%;
+                                display: flex;
+                                align-items: center;
+                                .user-name{
+                                    color: #FFF;
+                                    font-family: Inter;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    margin-left: 12px;
+                                }
+                            }
+                            .period-col{
+                                // width: 30%;
+                                .period-col-span{
+                                    display: flex;
+                                    flex-direction: column;
+                                    label{
+                                    color: #FFF;
+                                    font-family: Urbanist;
+                                    font-size: 15.528px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    letter-spacing: 0.776px;  
+                                }}
+                            }
+                            .days-col{
+                                // width: 10%;
+                            }
+                            .leave-col{
+                                // width: 15%;
+                            }
+                            .actions-col{
+                                border-top-right-radius: 20px;
+                                border-bottom-right-radius: 20px;
+                                // width: 35%;
+                                .actions-col-span{
+                                    display: flex;
+                                    align-items:center;
+                                    justify-content: space-between;
+                                    .buttons-span{
+                                        display: flex;
+                                        align-items: center;
+                                        .reject,.approve {
+                                            cursor: pointer;
+                                            width: 98px;
+                                            height: 40px;
+                                            border-radius: 20px;
+                                        }
+                                        .reject {
+                                            border: solid 2px #898989;
+                                            background-color: #1E1E1E;
+                                            color:#FFF;
+                                            font-family: Urbanist;
+                                            font-size: 15px;
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: 140%; /* 21px */
+                                            text-transform: uppercase;
+                                        }
+                                        .approve{
+                                            border: solid 2px #6E56E0;
+                                            background-color: #6E56E0;
+                                            color:#FFF;
+                                            font-family: Urbanist;
+                                            font-size: 15px;
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: 140%; /* 21px */
+                                            text-transform: uppercase;
+                                            margin-left: 8px;
+                                        }
+                                    }
+                                    .approved-buttons-span{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-end;
+                                        min-width: 204px;
+                                        .approve {
+                                        width: 110px;
+                                        height: 40px;
+                                        border-radius: 20px;
+                                        }
+                                        .approve{
+                                            border: solid 2px #6E56E0;
+                                            background-color: #6E56E0;
+                                            color:#FFF;
+                                            font-family: Urbanist;
+                                            font-size: 15px;
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: 140%; /* 21px */
+                                            text-transform: uppercase;
+                                            margin-left: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .component-footer{
+                    padding: 16px 16px 16px 24px;
+                    border-top: solid 2px #272727;
+                    p {
+                        margin: 0;
+                        color: #898989;
+                        text-align: center;
+                        font-family: Urbanist;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%; /* 12px */
+                        text-align: left;
+                    }
+                }
+            }
+            .most-day-away-component{
+                background: #1E1E1E;
+                flex: 1;
+                border-radius: 8px;
+                overflow: hidden;
+                .header-row{
+                    background: transparent;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: solid 2px #272727;
+                    padding: 16px 16px 10px 24px;
+                    .component-title{
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Urbanist;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 100%;
+                        margin: 0px;
+                    }
+                    .drodowns-component{
+                        display: flex;
+                        align-items: center;
+                        select {
+                            background-color: transparent;
+                            border: none;
+                            color: #898989;
+                            text-align: center;
+                            font-family: Urbanist;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 100%; /* 15px */
+                            text-transform: uppercase;
+                        }
+                        select:active{
+                            outline: none;
+                        }
+                    }
+                }
+                .data-component{
+                    min-height: 298px;
+                    padding: 10px 16px 10px 24px;
+                    .most-day-away-list{
+                        list-style: none;
+                        padding: 0px;
+                        .most-day-away-list-item{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 15px;
+                            .user-name-pic{
+                                display: flex;
+                                align-items: center;
+                                gap: 16px;
+                                .user-name{
+                                    margin: 0px;
+                                    overflow: hidden;
+                                    color: #898989;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    font-family: Inter;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 20px; /* 142.857% */
+                                }
+                            }
+                            .away-days-info{
+                                color: #FFF;
+                                font-family: Inter;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 20px; /* 142.857% */
+                            }
+                        }
+                    }
+                }
+                .component-footer{
+                    padding: 16px 16px 16px 24px;
+                    border-top: solid 2px #272727;
+                    p {
+                        margin: 0;
+                        color: #898989;
+                        text-align: center;
+                        font-family: Urbanist;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%; /* 12px */
+                        text-align: left;
+                    }
+                }
+            }
+            .avatar-component{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .avatar-component::after{
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #FFD928;
+                position: absolute;
+                top: 0px;
+                right: -20px;
+            }
+        }
+    }
 }

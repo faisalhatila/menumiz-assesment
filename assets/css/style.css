@@ -463,4 +463,388 @@ body {
   position: absolute;
   top: 0px;
   right: -20px;
+}
+.page-content .leave-requests-component {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .leave-requests-component .component-title-row {
+  display: flex;
+  justify-content: space-between;
+}
+.page-content .leave-requests-component .component-title-row .component-title {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+.page-content .leave-requests-component .component-title-row .request-view-type-buttons-component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.page-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view, .page-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
+  cursor: pointer;
+  border: none;
+  color: #898989;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 21px */
+  background: #272727;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.page-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.page-content .leave-requests-component .component-title-row .request-view-type-buttons-component .active {
+  color: #FFF !important;
+  font-weight: 700 !important;
+  background: #6E56E0 !important;
+}
+.page-content .leave-requests-component .component-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component {
+  background: #1E1E1E;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .header-row {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px #272727;
+  padding: 16px 16px 10px 24px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .header-row .component-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component {
+  display: flex;
+  align-items: center;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select {
+  background-color: transparent;
+  border: none;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  text-transform: uppercase;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select:active {
+  outline: none;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .week-days-row {
+  padding: 10px 16px 10px 24px;
+  overflow: hidden;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list {
+  display: flex;
+  list-style: none;
+  border: solid 1px #272727;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list .day-list-item {
+  flex: 1;
+  border-right: solid 1px #272727;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list .active-day {
+  background: #C33535;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px 10px 24px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table {
+  min-width: 100%;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row {
+  border-radius: 8px;
+  background-color: #272727;
+  padding: 12px 20px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td {
+  padding: 10px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td .sort-icon, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td .sort-icon {
+  margin-left: 10px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 10%;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col input[type=checkbox], .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col input[type=checkbox] {
+  margin-right: 10px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .pending-request, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .approved-request, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .pending-request, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .approved-request {
+  position: relative;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .pending-request::after, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .pending-request::after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD928;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .approved-request::after, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .approved-request::after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: green;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col {
+  display: flex;
+  align-items: center;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col .user-name, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col .user-name {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 12px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .period-col .period-col-span, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .period-col .period-col-span {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .period-col .period-col-span label, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .period-col .period-col-span label {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15.528px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.776px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span {
+  display: flex;
+  align-items: center;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+  cursor: pointer;
+  width: 98px;
+  height: 40px;
+  border-radius: 20px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject {
+  border: solid 2px #898989;
+  background-color: #1E1E1E;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+  border: solid 2px #6E56E0;
+  background-color: #6E56E0;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 204px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span .approve, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span .approve {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span .approve, .page-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span .approve {
+  border: solid 2px #6E56E0;
+  background-color: #6E56E0;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .component-footer {
+  padding: 16px 16px 16px 24px;
+  border-top: solid 2px #272727;
+}
+.page-content .leave-requests-component .component-row .heatmap-component .component-footer p {
+  margin: 0;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-align: left;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component {
+  background: #1E1E1E;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .header-row {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px #272727;
+  padding: 16px 16px 10px 24px;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .header-row .component-title {
+  color: #FFF;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0px;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component {
+  display: flex;
+  align-items: center;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select {
+  background-color: transparent;
+  border: none;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  text-transform: uppercase;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select:active {
+  outline: none;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .data-component {
+  min-height: 298px;
+  padding: 10px 16px 10px 24px;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list {
+  list-style: none;
+  padding: 0px;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic .user-name {
+  margin: 0px;
+  overflow: hidden;
+  color: #898989;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .away-days-info {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .component-footer {
+  padding: 16px 16px 16px 24px;
+  border-top: solid 2px #272727;
+}
+.page-content .leave-requests-component .component-row .most-day-away-component .component-footer p {
+  margin: 0;
+  color: #898989;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  text-align: left;
+}
+.page-content .leave-requests-component .component-row .avatar-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page-content .leave-requests-component .component-row .avatar-component::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFD928;
+  position: absolute;
+  top: 0px;
+  right: -20px;
 }/*# sourceMappingURL=style.css.map */

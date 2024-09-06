@@ -257,6 +257,65 @@
             </div>
           </div>
         </div>
+        <div class="leave-requests-component">
+          <div class="component-title-row">
+            <h1 class="component-title">Leave Requests</h1>
+            <div class="request-view-type-buttons-component">
+              <button id="listViewBtn" class="list-view active">
+                List View
+              </button>
+              <button id="monthViewBtn" class="month-view">Month-view</button>
+            </div>
+          </div>
+          <div class="component-row">
+            <div class="heatmap-component">
+              <div class="data-row">
+                <table id="leaveRequestsTable" class="leave-requests-table">
+                  <thead class="table-head">
+                    <tr class="table-head-row">
+                      <td class="table-col check-col">
+                        <input type="checkbox" />#
+                        <span class="sort-icon">
+                          <img src="/assets/img/SortIcon.svg" />
+                        </span>
+                      </td>
+                      <td class="table-col name-col">
+                        NAME
+                        <span class="sort-icon">
+                          <img src="/assets/img/SortIcon.svg" />
+                        </span>
+                      </td>
+                      <td class="table-col period-col">
+                        Period
+                        <span class="sort-icon">
+                          <img src="/assets/img/SortIcon.svg" />
+                        </span>
+                      </td>
+                      <td class="table-col days-col">
+                        DAY(S)
+                        <span class="sort-icon">
+                          <img src="/assets/img/SortIcon.svg" />
+                        </span>
+                      </td>
+                      <td class="table-col leave-col">
+                        LEAVE TYPE
+                        <span class="sort-icon">
+                          <img src="/assets/img/SortIcon.svg" />
+                        </span>
+                      </td>
+                      <td class="table-col actions-col">ACTIONS</td>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                  <tbody id="leaveRequestTableBody"></tbody>
+                </table>
+              </div>
+              <div class="component-footer">
+                <p>Most popular day: Friday</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script type="text/javascript" src="/assets/js/main.js"></script>

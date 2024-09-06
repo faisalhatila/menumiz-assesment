@@ -273,3 +273,15 @@ leaveRequestData.forEach((leave) => {
         leaveRequestTableBody.appendChild(tr);
     }
 });
+
+const leaveDaysTableComponent = document.getElementById('leaveDaysTableComponent');
+const toggleTableLabel = document.getElementById('toggleTableLabel');
+
+toggleTableLabel.addEventListener('click', () => {
+    if (leaveDaysTableComponent.style['max-height'] === '100px') {
+        leaveDaysTableComponent.style.maxHeight = '200px'
+    }
+    else {
+        leaveDaysTableComponent.style.maxHeight = '100px'
+    }
+});

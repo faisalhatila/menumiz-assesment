@@ -409,7 +409,244 @@
             </li>
           </ul>
         </div>
+        <div
+          id="leaveDetailsComponent"
+          style="display: none"
+          class="leave-deatils-component"
+        >
+          <div class="leave-details-header">
+            <h2>Leave Details</h2>
+            <img id="leaveDetailCloseIcon" src="/assets/img/CloseIcon.png" />
+          </div>
+          <div class="user-details-card">
+            <div class="user-details-component">
+              <img src="/assets/img/User3Avatar.png" />
+              <div class="user-info-component">
+                <div class="user-info-row">
+                  <label class="info-key">NAME</label>
+                  <label class="info-value" id="userName"
+                    >Nur Fariha binti Maslan</label
+                  >
+                </div>
+                <div class="user-info-row">
+                  <label class="info-key">LEAVE TYPE</label>
+                  <label class="info-value" id="leaveType"
+                    >Hospital Leave</label
+                  >
+                </div>
+                <div class="user-info-row">
+                  <label class="info-key">START DATE</label>
+                  <label class="info-value" id="startDate"
+                    >21 Apr, 2023 09:00 AM</label
+                  >
+                </div>
+                <div class="user-info-row">
+                  <label class="info-key">END DATE</label>
+                  <label class="info-value" id="endDate"
+                    >24 Apr, 2023 18:00 PM</label
+                  >
+                </div>
+                <div class="user-info-row">
+                  <label class="info-key">ATTACHMENT</label>
+                  <label class="info-value attachment-value" id="attechment">
+                    <img src="/assets/img/AttachmentIcon.svg" />
+                    Medical Certificate
+                  </label>
+                </div>
+                <div class="user-info-row">
+                  <label class="info-key">REASON</label>
+                  <label class="info-value" id="reason">Out of sorts</label>
+                </div>
+              </div>
+            </div>
+            <div class="leave-days-info-component">
+              <p class="leave-start-end-date">03 March 2023 - 06 march 2023</p>
+              <div class="leave-hours-and-table-controller-row">
+                <p class="total-hours-text">TOTAL HOURS: 16</p>
+                <span
+                  class="table-visibility-controller"
+                  id="toggleTableButton"
+                >
+                  <label id="toggleTableLabel" class="toggle-table-label"
+                    >Expand</label
+                  >
+                  <img src="/assets/img/DownIcon.svg" />
+                </span>
+              </div>
+            </div>
+            <div
+              id="leaveDaysTableComponent"
+              class="leave-days-table-component"
+              style="max-height: 100px"
+            >
+              <table class="leave-days-table">
+                <thead>
+                  <tr class="table-head">
+                    <td class="first-col">
+                      <label>Start Date</label>
+                      <img src="/assets/img/SortIcon.svg" />
+                    </td>
+                    <td>
+                      <label>DAY(S)</label>
+                    </td>
+                    <td class="last-col">
+                      <label>HOURS</label>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-body-row">
+                    <td>
+                      <label>21 Apr 2023</label>
+                    </td>
+                    <td>
+                      <label>Friday</label>
+                    </td>
+                    <td>
+                      <label>8</label>
+                    </td>
+                  </tr>
+                  <tr class="table-off-days-body-row">
+                    <td>
+                      <label>21 Apr 2023</label>
+                    </td>
+                    <td>
+                      <label>Friday</label>
+                    </td>
+                    <td>
+                      <label>8</label>
+                    </td>
+                  </tr>
+                  <tr class="table-off-days-body-row">
+                    <td>
+                      <label>21 Apr 2023</label>
+                    </td>
+                    <td>
+                      <label>Friday</label>
+                    </td>
+                    <td>
+                      <label>8</label>
+                    </td>
+                  </tr>
+                  <tr class="table-body-row">
+                    <td>
+                      <label>21 Apr 2023</label>
+                    </td>
+                    <td>
+                      <label>Friday</label>
+                    </td>
+                    <td>
+                      <label>8</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="approval-level-header">
+            <h2>Approval Level</h2>
+          </div>
+          <div class="approval-level-card">
+            <div class="approval-level-1-row">
+              <span class="approval-indicator approval-pending"></span>
+              <img src="/assets/img/User1Avatar.svg" class="approver-avatar" />
+              <div class="approver-info-component">
+                <div class="approver-info-row">
+                  <label class="approver-info-key">NAME</label>
+                  <label class="approver-info-value">Simon Minter</label>
+                </div>
+                <div class="approver-info-row">
+                  <label class="approver-info-key">DESIGNATION</label>
+                  <label class="approver-info-value">Human Resources</label>
+                </div>
+                <div class="approver-info-row">
+                  <label class="approver-info-key">STATUS</label>
+                  <label class="approver-info-value pending">
+                    Pending Approvel
+                  </label>
+                </div>
+              </div>
+              <span class="timeline-connect-line"></span>
+            </div>
+            <div class="approval-level-2-row">
+              <span class="approval-indicator approval-pending"></span>
+              <img src="/assets/img/User2Avatar.png" class="approver-avatar" />
+              <div class="approver-info-component">
+                <div class="approver-info-row">
+                  <label class="approver-info-key">NAME</label>
+                  <label class="approver-info-value">Simon Minter</label>
+                </div>
+                <div class="approver-info-row">
+                  <label class="approver-info-key">DESIGNATION</label>
+                  <label class="approver-info-value">Human Resources</label>
+                </div>
+                <div class="approver-info-row">
+                  <label class="approver-info-key">STATUS</label>
+                  <label class="approver-info-value pending">
+                    Pending Approvel
+                  </label>
+                </div>
+              </div>
+              <span class="timeline-connect-line"></span>
+            </div>
+            <div class="approval-level-3-row">
+              <span class="approval-indicator approval-approved"></span>
+              <img src="/assets/img/User3Avatar.png" class="approver-avatar" />
+              <div class="approver-info-component">
+                <div class="approver-info-row">
+                  <label class="approver-info-key">NAME</label>
+                  <label class="approver-info-value">Simon Minter</label>
+                </div>
+                <div class="approver-info-row">
+                  <label class="approver-info-key">DESIGNATION</label>
+                  <label class="approver-info-value">Human Resources</label>
+                </div>
+                <div class="approver-info-row">
+                  <label class="approver-info-key">STATUS</label>
+                  <label class="approver-info-value">
+                    03 Mar 2023, 17:30 AM
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approval-level-header">
+            <h2>Comments</h2>
+          </div>
+          <div class="comments-box-card">
+            <textarea rows="5" class="comments-box"></textarea>
+          </div>
+          <div class="leave-request-actions-row">
+            <botton class="action-button reject" id="rejectLeaveRequest"
+              >REJECT</botton
+            >
+            <botton class="action-button approve" id="approveLeaveRequest"
+              >APPROVE</botton
+            >
+          </div>
+        </div>
       </main>
+    </div>
+    <div
+      id="approveToastNotification"
+      style="display: none"
+      class="approve-toast-notification"
+    >
+      <div class="notification-header">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="toast-title">
+          <p>Notification</p>
+          <span id="closeNotification" class="close-notification-span">
+            <label>Just Now</label>
+            <img id="closeNotification" src="/assets/img/CloseIcon.png" />
+          </span>
+        </div>
+      </div>
+      <div class="notification-body">
+        <p class="notification-message" id="notificationMessage"></p>
+      </div>
     </div>
     <script type="text/javascript" src="/assets/js/main.js"></script>
   </body>

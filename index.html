@@ -18,7 +18,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="top-bar">
+    <div id="topBar" class="top-bar">
       <div class="logo-wrapper">
         <div class="logo-box">
           <img src="/assets/img/Logo.png" />
@@ -620,7 +620,8 @@
             <botton class="action-button reject" id="rejectLeaveRequest"
               >REJECT</botton
             >
-            <botton class="action-button approve" id="approveLeaveRequest"
+            <!-- <botton class="action-button approve" id="approveLeaveRequest" -->
+            <botton class="action-button approve" id="openModalBtn"
               >APPROVE</botton
             >
           </div>
@@ -648,9 +649,51 @@
         <p class="notification-message" id="notificationMessage"></p>
       </div>
     </div>
-    <div class="modal-overlay">
-      <div class="modal-content"></div>
+    <div
+      id="rejectToastNotification"
+      style="display: none"
+      class="reject-toast-notification"
+    >
+      <div class="reject-notification-header">
+        <div class="reject-progress-bar">
+          <div class="reject-progress"></div>
+        </div>
+        <div class="reject-toast-title">
+          <p>Notification</p>
+          <span
+            id="closeRejectNotification"
+            class="close-reject-notification-span"
+          >
+            <label>Just Now</label>
+            <img id="closeRejectNotification" src="/assets/img/CloseIcon.png" />
+          </span>
+        </div>
+      </div>
+      <div class="notification-reject-body">
+        <p
+          class="notification-reject-message"
+          id="notificationRejectMessage"
+        ></p>
+      </div>
     </div>
+    <!-- <div style="display: none" class="modal-overlay"></div> -->
+    <!-- <div class="modal-overlay">
+      <div class="modal-content"></div>
+    </div> -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title">Confirmation</p>
+          <img id="closeModalBtn" src="/assets/img/CloseIcon.png" />
+        </div>
+        <p class="modal-message" id="modalMessage"></p>
+        <div class="modal-footer">
+          <button id="closeModalBtn1" class="no-btn">No</button>
+          <button id="yesModalBtn" class="yes-btn">YES</button>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="/assets/js/main.js"></script>
   </body>
 </html>

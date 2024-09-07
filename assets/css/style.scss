@@ -610,7 +610,7 @@ body{
                                         margin-right: 10px;
                                     }
                                 }
-                                .pending-request,.approved-request{
+                                .pending-request,.approved-request,.rejected-request{
                                     position: relative;
                                 }
                                 .pending-request::after{
@@ -630,6 +630,15 @@ body{
                                     height: 8px;
                                     border-radius: 50%;
                                     background: green;
+                                }
+                                .rejected-request::after{
+                                    position: absolute;
+                                    content: '';
+                                    top: 25px;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 50%;
+                                    background: red;
                                 }
                                 .name-col{
                                     // width: 30%;
@@ -728,6 +737,27 @@ body{
                                                 line-height: 140%; /* 21px */
                                                 text-transform: uppercase;
                                                 margin-left: 8px;
+                                            }
+                                        }
+                                        .rejected-buttons-span{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-start;
+                                            min-width: 204px;
+                                            .reject {
+                                            width: 110px;
+                                            height: 40px;
+                                            border-radius: 20px;
+                                            border: solid 2px #898989;
+                                            background-color: #1E1E1E;
+                                            color:#FFF;
+                                            color:#FFF;
+                                            font-family: Urbanist;
+                                            font-size: 15px;
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: 140%; /* 21px */
+                                            text-transform: uppercase;
                                             }
                                         }
                                     }
@@ -1317,21 +1347,220 @@ body{
         }
     }
 }
-
-.modal-overlay{
+.reject-toast-notification {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
     z-index: 100;
+    top: 30px;
+    left: 20px;
+    background: #1E1E1E;
+    color: #fff;
+    min-width: 340px;
+    min-height: 122px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    .reject-notification-header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        // margin-top: 10px;
+        .reject-progress-bar{
+            margin: 15px 10px;
+            // max-width: 100%;
+            height: 8px;
+            background-color: #888;
+            border-radius: 4px;
+            overflow: hidden;
+            .reject-progress{
+                width: 100%;
+                height: 100%;
+                background: red;
+            }
+        }
+        .reject-toast-title{
+            margin: 5px 10px;
+            border-bottom: solid 2px #272727;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                margin: 0px;
+            }
+            .close-reject-notification-span{
+                display: flex;
+                align-items: center;
+                img {
+                    max-width: 50%;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .notification-reject-body{
+        padding: 10px;
+        .notification-reject-message{
+            color: #FFF;
+            font-family: Urbanist;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            margin: 0px;
+            margin: 0px 10px;
+        }
+    }
+}
+
+// .modal-overlay{
+//     position: fixed;
+//     top: 0px;
+//     left: 0px;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0,0,0,0.7);
+//     z-index: 100;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     .modal-content {
+//         width: 350px;
+//         height: 250px;
+//         background-color: #fff;
+//     }
+// }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
     display: flex;
     justify-content: center;
     align-items: center;
-    .modal-content {
-        width: 350px;
-        height: 250px;
-        background-color: #fff;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth transition */
+  }
+  
+  .modal-content {
+    background: #1E1E1E;
+    padding: 20px;
+    height: 266px;
+    border-radius: 12px;
+    // border-radius: 8px;
+    width: 600px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-30px); /* Start the content a bit higher */
+    transition: transform 0.4s ease; /* Transition for sliding down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .modal-header {
+        border-bottom: solid 2px #272727;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .modal-title{
+            color: #FFF;
+            font-family: Urbanist;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 125%;
+        }
     }
-}
+    .modal-message{
+        color: #FFF;
+        text-align: center;
+        font-family: Urbanist;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px; 
+    }
+    .modal-footer{
+        border-top: solid 2px #272727;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .no-btn,.yes-btn {
+            width: 88px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: var(--White, #FFF);
+            font-family: Urbanist;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 21px */
+            text-transform: uppercase;
+            border-radius: 20px;
+        }
+        .no-btn {
+            border: solid 2px #898989;
+            background: #1E1E1E;
+        }
+        .yes-btn {
+            background: #6E56E0;
+            border: solid 2px #6E56E0;
+        }
+    }
+  }
+  
+  /* Show modal with smooth fade-in */
+  .modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal-overlay.show .modal-content {
+    transform: translateY(0); /* Slide modal content into place */
+  }
+  
+  /* Blur the content behind the modal */
+  .page-content {
+    transition: filter 0.4s ease; /* Smooth blur transition */
+  }
+  
+  /* Example close button style */
+  .close-modal {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Styles for the modal content */
+  
+  /* Optional button to open the modal */
+  #openModalBtn {
+    // padding: 10px 20px;
+    // background-color: #28a745;
+    // color: white;
+    // border: none;
+    // border-radius: 5px;
+    // cursor: pointer;
+    border-radius: 20px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: solid 2px #6E56E0;
+    background: #6E56E0;
+    color: #fff;
+    margin: 0 20px 0 15px;
+    width: 130px;
+    height: 40px;
+  }

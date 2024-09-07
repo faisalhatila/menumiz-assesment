@@ -1,8 +1,10 @@
 const notificationComponent = document.getElementById('notificationsComponent')
 const leaveDetailsComponent = document.getElementById('leaveDetailsComponent')
+const topBarComponent = document.getElementById('topBar')
 const notificationIcon = document.getElementById('notificationButton')
 const leaveDetailCloseIcon = document.getElementById('leaveDetailCloseIcon')
 const toggleLeaveDetailsIcon = document.getElementById('toggleLeaveDetails')
+const modalMessageElement = document.getElementById('modalMessage')
 
 notificationIcon.addEventListener('click', () => {
     if (notificationComponent.style.display === 'none') {
@@ -64,11 +66,16 @@ Array.from(circularProgress).forEach((progressBar) => {
 });
 
 const approveToastNotification = document.getElementById('approveToastNotification');
+const rejectToastNotification = document.getElementById('rejectToastNotification');
 
 const closeNotificationButton = document.getElementById("closeNotification");
+const closeRejectNotificationButton = document.getElementById("closeRejectNotification");
 
 closeNotificationButton.addEventListener("click", () => {
     approveToastNotification.style.display = "none";
+})
+closeRejectNotificationButton.addEventListener("click", () => {
+    rejectToastNotification.style.display = "none";
 })
 
 
@@ -126,18 +133,17 @@ const leaveRequestData = [
         ],
         days: '2.0',
         leave_type: 'Annual Leave',
-        status: 'approved',
+        status: 'rejected',
     },
 ]
 
 
 
-// Get the table body element
-const leaveRequestTableBody = document.getElementById('leaveRequestTableBody');
 
-// const approveToastNotification = document.getElementById('approveToastNotification');
 const notificationMessage = document.getElementById('notificationMessage');
+const notificationRejectMessage = document.getElementById('notificationRejectMessage');
 const progressBar = document.querySelector('.progress-bar .progress');
+const rejectProgressBar = document.querySelector('.reject-progress-bar .reject-progress');
 
 function showApproveToast(message) {
     notificationMessage.textContent = message;
@@ -157,6 +163,27 @@ function showApproveToast(message) {
         progressBar.style.transition = 'none';
     }, 5000);
 }
+function showRejectToast(message) {
+    console.log({ rejMsg: message })
+    notificationRejectMessage.textContent = message;
+    rejectToastNotification.style.display = 'block';
+
+    rejectProgressBar.style.transition = 'none';
+    rejectProgressBar.style.width = '100%';
+    rejectProgressBar.offsetHeight;
+
+    setTimeout(() => {
+        rejectProgressBar.style.transition = 'width 5s linear';
+        rejectProgressBar.style.width = '0%';
+    }, 10);
+
+    setTimeout(() => {
+        rejectToastNotification.style.display = 'none';
+        rejectProgressBar.style.transition = 'none';
+    }, 5000);
+}
+// Get the table body element
+const leaveRequestTableBody = document.getElementById('leaveRequestTableBody');
 
 // Loop through the data
 leaveRequestData.forEach((leave) => {
@@ -168,6 +195,7 @@ leaveRequestData.forEach((leave) => {
     if (leave.status === 'pending') {
         // Assign a dynamic ID to the approve button using the leave request's ID
         const approveButtonId = `approve-btn-${leave.id}`;
+        const rejectButtonId = `reject-btn-${leave.id}`;
         const toggleIconId = `toggleLeaveDetails-${leave.id}`; // Assign unique ID to the icon
 
         tr.innerHTML = `
@@ -193,7 +221,7 @@ leaveRequestData.forEach((leave) => {
             <td class="table-col actions-col">
                 <span class="actions-col-span">
                     <span class="buttons-span">
-                        <button class="reject">REJECT</button>
+                        <button class="reject" id="${rejectButtonId}">REJECT</button>
                         <button class="approve" id="${approveButtonId}">APPROVE</button>
                     </span>
                     <img src="/assets/img/RightIcon.svg" id="toggleLeaveDetails-${leave.id}" />
@@ -205,30 +233,40 @@ leaveRequestData.forEach((leave) => {
         leaveRequestTableBody.appendChild(tr);
 
         // Add click event listener to the approve button
+        document.getElementById(rejectButtonId).addEventListener('click', () => {
+            openModal(`Are you sure want to reject ${leave.name} ${leave.leave_type} for ${leave.days} day(s)`, () => {
+                leave.status = 'rejected';
+                const approveButton = document.getElementById(approveButtonId);
+                const rejectButton = document.getElementById(rejectButtonId);
+                rejectButton.textContent = 'REJECTED';
+                const buttonsSpan = rejectButton.closest('.buttons-span');
+                approveButton.remove();
+                buttonsSpan.classList.remove('buttons-span');
+                buttonsSpan.classList.add('rejected-buttons-span');
+                const checkColTd = tr.querySelector('.check-col');
+                checkColTd.classList.remove('pending-request');
+                checkColTd.classList.add('rejected-request');
+                showRejectToast(`${leave.name} ${leave.leave_type} Rejected!.`);
+            })
+        })
         document.getElementById(approveButtonId).addEventListener('click', () => {
-            console.log('Row data:', leave);
+            openModal(`Are you sure want to approve ${leave.name} ${leave.leave_type} for ${leave.days} day(s)`, () => {
+                // I want tbelow code must run when I click on YES Modal button
+                leave.status = 'approved';
+                const approveButton = document.getElementById(approveButtonId);
+                approveButton.textContent = 'APPROVED';
+                const buttonsSpan = approveButton.closest('.buttons-span');
+                const rejectButton = buttonsSpan.querySelector('.reject');
+                rejectButton.remove();
+                buttonsSpan.classList.remove('buttons-span');
+                buttonsSpan.classList.add('approved-buttons-span');
+                const checkColTd = tr.querySelector('.check-col');
+                checkColTd.classList.remove('pending-request');
+                checkColTd.classList.add('approved-request');
+                showApproveToast(`${leave.name} ${leave.leave_type} Approved!.`);
 
-            // Change status to approved
-            leave.status = 'approved';
+            })
 
-            // Update the button text to APPROVED
-            const approveButton = document.getElementById(approveButtonId);
-            approveButton.textContent = 'APPROVED';
-
-            // Remove the reject button
-            const buttonsSpan = approveButton.closest('.buttons-span');
-            const rejectButton = buttonsSpan.querySelector('.reject');
-            rejectButton.remove();
-
-            // Change the class from buttons-span to approved-buttons-span
-            buttonsSpan.classList.remove('buttons-span');
-            buttonsSpan.classList.add('approved-buttons-span');
-
-            const checkColTd = tr.querySelector('.check-col');
-            checkColTd.classList.remove('pending-request');
-            checkColTd.classList.add('approved-request');
-
-            showApproveToast(`${leave.name} ${leave.leave_type} Approved!.`);
 
         });
         document.getElementById(toggleIconId).addEventListener('click', () => {
@@ -238,7 +276,7 @@ leaveRequestData.forEach((leave) => {
                 leaveDetailsComponent.style.display = 'none';
             }
         });
-    } else {
+    } else if (leave.status === 'approved') {
         tr.innerHTML = `
             <td class="table-col check-col approved-request">
                 <input type="checkbox" />
@@ -271,6 +309,39 @@ leaveRequestData.forEach((leave) => {
 
         // Append the row to the table body
         leaveRequestTableBody.appendChild(tr);
+    } else {
+        tr.innerHTML = `
+            <td class="table-col check-col rejected-request">
+                <input type="checkbox" />
+            </td>
+            <td class="table-col name-col">
+                <img src="${leave.userImage}" />
+                <label class="user-name">${leave.name}</label>
+            </td>
+            <td class="table-col period-col">
+                <span class="period-col-span">
+                    <label>${leave.period[0]}</label>
+                    <label>${leave.period[1]}</label>
+                </span>
+            </td>
+            <td class="table-col days-col">
+                <label>${leave.days}</label>
+            </td>
+            <td class="table-col leave-col">
+                <label>${leave.leave_type}</label>
+            </td>
+            <td class="table-col actions-col">
+                <span class="actions-col-span">
+                    <span class="rejected-buttons-span">
+                        <button class="reject">REJECTED</button>
+                    </span>
+                    <img src="/assets/img/RightIcon.svg" />
+                </span>
+            </td>
+        `;
+
+        // Append the row to the table body
+        leaveRequestTableBody.appendChild(tr);
     }
 });
 
@@ -283,5 +354,57 @@ toggleTableLabel.addEventListener('click', () => {
     }
     else {
         leaveDaysTableComponent.style.maxHeight = '100px'
+    }
+});
+
+
+// Get the modal elements
+const modalOverlay = document.getElementById('modalOverlay');
+const closeModalButton = document.getElementById('closeModalBtn');
+const closeModalButton1 = document.getElementById('closeModalBtn1');
+const openModalButton = document.getElementById('openModalBtn');
+
+
+let pendingApprovalAction = null
+// Function to open the modal with transition and disable background scroll
+function openModal(message, callBackAction) {
+    modalMessageElement.innerHTML = message
+    modalOverlay.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Disable scrolling on background
+    leaveDetailsComponent.style.overflow = 'hidden'; // Disable scrolling on background
+    document.querySelector('.page-content').style.filter = 'blur(5px)';
+    topBarComponent.style.filter = 'blur(5px)';
+    pendingApprovalAction = callBackAction
+
+}
+
+// Function to close the modal and enable background scroll
+function closeModal() {
+    topBarComponent.style.filter = '';
+    modalOverlay.classList.remove('show');
+    document.body.style.overflow = ''; // Re-enable scrolling on background
+    leaveDetailsComponent.style.overflow = 'auto';
+    document.querySelector('.page-content').style.filter = 'none';
+}
+
+// Event listener for YES button in the modal
+document.getElementById('yesModalBtn').addEventListener('click', () => {
+    if (pendingApprovalAction) {
+        pendingApprovalAction(); // Execute the stored action
+    }
+    closeModal(); // Close the modal after the action
+});
+
+// Event listeners for opening and closing the modal
+openModalButton.addEventListener('click', openModal);
+closeModalButton.addEventListener('click', closeModal);
+closeModalButton1.addEventListener('click', () => {
+    closeModal()
+});
+
+// Optionally close the modal when clicking outside of it
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+        closeModal();
     }
 });

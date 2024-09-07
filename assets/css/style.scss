@@ -894,6 +894,107 @@ body{
                 }
             }
         }
+        .leave-details-nested-view{
+            margin-top: 140px;
+            width: calc(100% - 500px);
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .title{
+                    color: #FFF;
+                    font-family: Urbanist;
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 125%;
+                }
+                .request-view-type-buttons-component{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .list-view,.month-view{
+                        cursor: pointer;
+                        border: none;
+                        color: #898989;
+                        font-family: Urbanist;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%; /* 21px */
+                        background: #272727;
+                        width: 120px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                    }
+                    .list-view{
+                        border-top-left-radius: 16px;
+                        border-bottom-left-radius: 16px;
+                    }
+                    .month-view{
+                        border-top-right-radius: 16px;
+                        border-bottom-right-radius: 16px;
+                    }
+                    .active {
+                        color: #FFF !important;
+                        font-weight: 700 !important;
+                        background: #6E56E0 !important;
+    
+                    }
+                }
+            }
+            .body {
+                margin-top: 38px;
+                background-color: #1E1E1E;
+                border-radius: 8px;
+                padding: 20px;
+                .header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .tabs{
+                        display: flex;
+                        align-items: center;
+                        .tab {
+                            margin-right: 32px;
+                            padding: 0px 0px 10px 0px;
+                        }
+                        .active {
+                            border-bottom: solid 2px #6E56E0;
+                            padding: 0px 10px 10px 10px;
+                        }
+                    }
+                    .date-picker-row{
+                        display: flex;
+                        align-items: center;
+                        .arrow,.calendar{
+                            margin-right: 15px;
+                        }
+                        .month{
+                            color: #FFF;
+                            font-family: Urbanist;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 140%;
+
+                        }
+                        .year {
+                            color: #898989;
+                            font-family: Urbanist;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            margin: 0 15px;
+                        }
+                    }
+                }
+            }
+        }
         .notifications-component{
             width: 464px;
             min-height: calc(100vh - 90px);

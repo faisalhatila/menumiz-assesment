@@ -23,6 +23,7 @@ leaveDetailCloseIcon.addEventListener('click', () => {
     else {
         leaveDetailsComponent.style.display = 'none'
     }
+    document.getElementById('normalView').style.display = ''
 })
 const listItems = document.querySelectorAll('#daysList li');
 
@@ -274,6 +275,9 @@ leaveRequestData.forEach((leave) => {
                 leaveDetailsComponent.style.display = 'block';
             } else {
                 leaveDetailsComponent.style.display = 'none';
+            }
+            if (document.getElementById('normalView').style.display === '') {
+                document.getElementById('normalView').style.display = 'none'
             }
         });
     } else if (leave.status === 'approved') {

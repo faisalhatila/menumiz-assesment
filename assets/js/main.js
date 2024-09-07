@@ -24,6 +24,8 @@ leaveDetailCloseIcon.addEventListener('click', () => {
         leaveDetailsComponent.style.display = 'none'
     }
     document.getElementById('normalView').style.display = ''
+    document.getElementById('leaveDetailsNestedView').style.display = 'none'
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 const listItems = document.querySelectorAll('#daysList li');
 
@@ -278,6 +280,8 @@ leaveRequestData.forEach((leave) => {
             }
             if (document.getElementById('normalView').style.display === '') {
                 document.getElementById('normalView').style.display = 'none'
+                document.getElementById('leaveDetailsNestedView').style.display = ''
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     } else if (leave.status === 'approved') {

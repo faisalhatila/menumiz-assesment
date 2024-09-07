@@ -976,6 +976,119 @@ body {
   line-height: 140%;
   margin: 0 15px;
 }
+.page-content .main-content .leave-details-nested-view .body .request-card-list {
+  margin-top: 18px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card {
+  border: solid 2px #272727;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 2px #272727;
+  padding-bottom: 10px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .name-and-avatar {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .name-and-avatar img {
+  margin-right: 8px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .name-and-avatar p {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  text-transform: capitalize;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .reject, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .approve {
+  cursor: pointer;
+  width: 98px;
+  height: 40px;
+  border-radius: 20px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .reject {
+  border: solid 2px #898989;
+  background-color: #1E1E1E;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .header .actions-div .approve {
+  border: solid 2px #6E56E0;
+  background-color: #6E56E0;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px 0px 0px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box {
+  flex: 1;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days {
+  margin-bottom: 15px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type {
+  display: flex;
+  align-items: center;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .value {
+  flex: 1;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .key, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .key {
+  color: #898989;
+  font-family: Urbanist;
+  font-size: 15.528px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.776px;
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .start-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .end-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .days .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .dates-info-box .leave-type .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .start-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .end-date .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .days .value, .page-content .main-content .leave-details-nested-view .body .request-card-list .leave-request-card .content-row .other-info-box .leave-type .value {
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15.528px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.776px;
+}
+.page-content .main-content .leave-details-nested-view .body .request-card-list .pending::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #FFA424;
+  top: 0px;
+  left: 0px;
+}
 .page-content .main-content .notifications-component {
   width: 464px;
   min-height: calc(100vh - 90px);

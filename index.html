@@ -127,7 +127,7 @@
             </li>
           </ul>
         </div>
-        <div id="normalView" style="display: none">
+        <div id="normalView">
           <div class="dashboard-component">
             <h1 class="component-title">Dashboard</h1>
             <div class="component-row">
@@ -318,7 +318,11 @@
             </div>
           </div>
         </div>
-        <div id="leaveDetailsNestedView" class="leave-details-nested-view">
+        <div
+          id="leaveDetailsNestedView"
+          style="display: none"
+          class="leave-details-nested-view"
+        >
           <div class="header">
             <p class="title">Leave Requests</p>
             <div class="request-view-type-buttons-component">
@@ -342,6 +346,236 @@
                 <img class="calendar" src="/assets/img/Date_range_fill.svg" />
                 <img class="arrow" src="/assets/img/arrow-down.svg" />
                 <img class="arrow" src="/assets/img/arrow-right.svg" />
+              </div>
+            </div>
+            <div class="request-card-list" id="requestsCardList">
+              <div class="leave-request-card pending">
+                <div class="header">
+                  <div class="name-and-avatar">
+                    <img src="/assets/img/avatars/Mark.svg" />
+                    <p>Mark Jacobs</p>
+                  </div>
+                  <div class="actions-div">
+                    <button class="reject" id="${rejectButtonId}">
+                      REJECT
+                    </button>
+                    <button class="approve" id="${approveButtonId}">
+                      APPROVE
+                    </button>
+                  </div>
+                </div>
+                <div class="content-row">
+                  <div class="dates-info-box">
+                    <div class="start-date">
+                      <label class="key">START DATE</label>
+                      <label class="value">31 Mar, 2023 09:00 AM</label>
+                    </div>
+                    <div class="end-date">
+                      <label class="key">END DATE</label>
+                      <label class="value">31 Mar, 2023 18:00 PM</label>
+                    </div>
+                  </div>
+                  <div class="other-info-box">
+                    <div class="days">
+                      <label class="key">DAY(S)</label>
+                      <label class="value">1.0</label>
+                    </div>
+                    <div class="leave-type">
+                      <label class="key">LEAVE TYPE</label>
+                      <label class="value">Annual Leave</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-request-card pending">
+                <div class="header">
+                  <div class="name-and-avatar">
+                    <img src="/assets/img/avatars/Mark.svg" />
+                    <p>Mark Jacobs</p>
+                  </div>
+                  <div class="actions-div">
+                    <button class="reject" id="${rejectButtonId}">
+                      REJECT
+                    </button>
+                    <button class="approve" id="${approveButtonId}">
+                      APPROVE
+                    </button>
+                  </div>
+                </div>
+                <div class="content-row">
+                  <div class="dates-info-box">
+                    <div class="start-date">
+                      <label class="key">START DATE</label>
+                      <label class="value">31 Mar, 2023 09:00 AM</label>
+                    </div>
+                    <div class="end-date">
+                      <label class="key">END DATE</label>
+                      <label class="value">31 Mar, 2023 18:00 PM</label>
+                    </div>
+                  </div>
+                  <div class="other-info-box">
+                    <div class="days">
+                      <label class="key">DAY(S)</label>
+                      <label class="value">1.0</label>
+                    </div>
+                    <div class="leave-type">
+                      <label class="key">LEAVE TYPE</label>
+                      <label class="value">Annual Leave</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-request-card pending">
+                <div class="header">
+                  <div class="name-and-avatar">
+                    <img src="/assets/img/avatars/Mark.svg" />
+                    <p>Mark Jacobs</p>
+                  </div>
+                  <div class="actions-div">
+                    <button class="reject" id="${rejectButtonId}">
+                      REJECT
+                    </button>
+                    <button class="approve" id="${approveButtonId}">
+                      APPROVE
+                    </button>
+                  </div>
+                </div>
+                <div class="content-row">
+                  <div class="dates-info-box">
+                    <div class="start-date">
+                      <label class="key">START DATE</label>
+                      <label class="value">31 Mar, 2023 09:00 AM</label>
+                    </div>
+                    <div class="end-date">
+                      <label class="key">END DATE</label>
+                      <label class="value">31 Mar, 2023 18:00 PM</label>
+                    </div>
+                  </div>
+                  <div class="other-info-box">
+                    <div class="days">
+                      <label class="key">DAY(S)</label>
+                      <label class="value">1.0</label>
+                    </div>
+                    <div class="leave-type">
+                      <label class="key">LEAVE TYPE</label>
+                      <label class="value">Annual Leave</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-request-card">
+                <div class="header">
+                  <div class="name-and-avatar">
+                    <img src="/assets/img/avatars/Mark.svg" />
+                    <p>Mark Jacobs</p>
+                  </div>
+                  <div class="actions-div">
+                    <button class="reject" id="${rejectButtonId}">
+                      REJECT
+                    </button>
+                    <button class="approve" id="${approveButtonId}">
+                      APPROVE
+                    </button>
+                  </div>
+                </div>
+                <div class="content-row">
+                  <div class="dates-info-box">
+                    <div class="start-date">
+                      <label class="key">START DATE</label>
+                      <label class="value">31 Mar, 2023 09:00 AM</label>
+                    </div>
+                    <div class="end-date">
+                      <label class="key">END DATE</label>
+                      <label class="value">31 Mar, 2023 18:00 PM</label>
+                    </div>
+                  </div>
+                  <div class="other-info-box">
+                    <div class="days">
+                      <label class="key">DAY(S)</label>
+                      <label class="value">1.0</label>
+                    </div>
+                    <div class="leave-type">
+                      <label class="key">LEAVE TYPE</label>
+                      <label class="value">Annual Leave</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-request-card">
+                <div class="header">
+                  <div class="name-and-avatar">
+                    <img src="/assets/img/avatars/Mark.svg" />
+                    <p>Mark Jacobs</p>
+                  </div>
+                  <div class="actions-div">
+                    <button class="reject" id="${rejectButtonId}">
+                      REJECT
+                    </button>
+                    <button class="approve" id="${approveButtonId}">
+                      APPROVE
+                    </button>
+                  </div>
+                </div>
+                <div class="content-row">
+                  <div class="dates-info-box">
+                    <div class="start-date">
+                      <label class="key">START DATE</label>
+                      <label class="value">31 Mar, 2023 09:00 AM</label>
+                    </div>
+                    <div class="end-date">
+                      <label class="key">END DATE</label>
+                      <label class="value">31 Mar, 2023 18:00 PM</label>
+                    </div>
+                  </div>
+                  <div class="other-info-box">
+                    <div class="days">
+                      <label class="key">DAY(S)</label>
+                      <label class="value">1.0</label>
+                    </div>
+                    <div class="leave-type">
+                      <label class="key">LEAVE TYPE</label>
+                      <label class="value">Annual Leave</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leave-request-card">
+                <div class="header">
+                  <div class="name-and-avatar">
+                    <img src="/assets/img/avatars/Mark.svg" />
+                    <p>Mark Jacobs</p>
+                  </div>
+                  <div class="actions-div">
+                    <button class="reject" id="${rejectButtonId}">
+                      REJECT
+                    </button>
+                    <button class="approve" id="${approveButtonId}">
+                      APPROVE
+                    </button>
+                  </div>
+                </div>
+                <div class="content-row">
+                  <div class="dates-info-box">
+                    <div class="start-date">
+                      <label class="key">START DATE</label>
+                      <label class="value">31 Mar, 2023 09:00 AM</label>
+                    </div>
+                    <div class="end-date">
+                      <label class="key">END DATE</label>
+                      <label class="value">31 Mar, 2023 18:00 PM</label>
+                    </div>
+                  </div>
+                  <div class="other-info-box">
+                    <div class="days">
+                      <label class="key">DAY(S)</label>
+                      <label class="value">1.0</label>
+                    </div>
+                    <div class="leave-type">
+                      <label class="key">LEAVE TYPE</label>
+                      <label class="value">Annual Leave</label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -439,7 +673,11 @@
             </li>
           </ul>
         </div>
-        <div id="leaveDetailsComponent" class="leave-deatils-component">
+        <div
+          id="leaveDetailsComponent"
+          style="display: none"
+          class="leave-deatils-component"
+        >
           <div class="leave-details-header">
             <h2>Leave Details</h2>
             <img id="leaveDetailCloseIcon" src="/assets/img/CloseIcon.png" />

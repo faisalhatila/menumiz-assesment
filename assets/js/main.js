@@ -563,15 +563,9 @@ individualCheckboxes.forEach(checkbox => {
     });
 });
 
-// Add event listeners to all elements with the class closeTotalCheckRequest
 const closeButtons = document.querySelectorAll('.closeTotalCheckRequest');
 const closeButton1 = document.getElementById('rejectTotalCheckRequest');
 const closeButton2 = document.getElementById('approveeTotalCheckRequest');
-// closeButtons.forEach(button => {
-//     button.addEventListener('click', function () {
-//         resetState();
-//     });
-// });
 closeButton1.addEventListener('click', () => {
     resetState();
 })

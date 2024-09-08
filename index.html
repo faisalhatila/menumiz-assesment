@@ -36,7 +36,7 @@
         <div class="actions-component">
           <div class="search-bar-component">
             <img src="/assets/img/SearchNormal.svg" />
-            <input type="search" placeholder="Enter any keyword" />
+            <input type="text" placeholder="Enter any keyword" />
           </div>
           <div class="filter-icon-component">
             <img src="/assets/img/FilterIcon.png" />
@@ -102,7 +102,7 @@
         </ul>
       </nav>
       <main class="main-content">
-        <div class="tabs-row">
+        <div id="tabsRow" class="tabs-row">
           <ul class="tabs-list">
             <li class="tabs-list-item active unread">
               <label> Leave Management</label>
@@ -122,7 +122,7 @@
             <li class="tabs-list-item">
               <label> Leave Approver</label>
             </li>
-            <li class="tabs-list-item">
+            <li id="filterIcon" class="tabs-list-item">
               <img src="/assets/img/FilterIcon.png" />
             </li>
           </ul>
@@ -221,28 +221,28 @@
                   <ul class="most-day-away-list">
                     <li class="most-day-away-list-item">
                       <div class="user-name-pic">
-                        <img src="/assets/img/User2Avatar.png" />
+                        <img src="/assets/img/avatars/Mark.svg" />
                         <p class="user-name">Mark Jacobs</p>
                       </div>
                       <p class="away-days-info">5.0 day(s)</p>
                     </li>
                     <li class="most-day-away-list-item">
                       <div class="user-name-pic">
-                        <img src="/assets/img/User1Avatar.svg" />
+                        <img src="/assets/img/avatars/Charlie.svg" />
                         <p class="user-name">Charlie Kristen</p>
                       </div>
                       <p class="away-days-info">3.5 day(s)</p>
                     </li>
                     <li class="most-day-away-list-item">
                       <div class="user-name-pic">
-                        <img src="/assets/img/User3Avatar.png" />
+                        <img src="/assets/img/avatars/Nur.svg" />
                         <p class="user-name">Nur Fariha binti Maslan</p>
                       </div>
                       <p class="away-days-info">1.0 day(s)</p>
                     </li>
                     <li class="most-day-away-list-item">
                       <div class="user-name-pic">
-                        <img src="/assets/img/User1Avatar.svg" />
+                        <img src="/assets/img/avatars/Nishant.svg" />
                         <p class="user-name">Nishant Talwar</p>
                       </div>
                       <p class="away-days-info">1.0 day(s)</p>
@@ -271,48 +271,66 @@
             <div class="component-row">
               <div class="heatmap-component">
                 <div class="data-row">
-                  <table id="leaveRequestsTable" class="leave-requests-table">
-                    <thead class="table-head">
-                      <tr class="table-head-row">
-                        <td class="table-col check-col">
+                  <div id="leaveRequestsTable" class="leave-requests-table-div">
+                    <div class="table-head-div">
+                      <div class="table-head-row-div">
+                        <div class="table-col-div check-col-div">
                           <input type="checkbox" />#
                           <span class="sort-icon">
                             <img src="/assets/img/SortIcon.svg" />
                           </span>
-                        </td>
-                        <td class="table-col name-col">
+                        </div>
+                        <div class="table-col-div name-col-div">
                           NAME
                           <span class="sort-icon">
                             <img src="/assets/img/SortIcon.svg" />
                           </span>
-                        </td>
-                        <td class="table-col period-col">
-                          Period
+                        </div>
+                        <div class="table-col-div period-col-div">
+                          PERIOD
                           <span class="sort-icon">
                             <img src="/assets/img/SortIcon.svg" />
                           </span>
-                        </td>
-                        <td class="table-col days-col">
+                        </div>
+                        <div class="table-col-div days-col-div">
                           DAY(S)
                           <span class="sort-icon">
                             <img src="/assets/img/SortIcon.svg" />
                           </span>
-                        </td>
-                        <td class="table-col leave-col">
+                        </div>
+                        <div class="table-col-div leave-col-div">
                           LEAVE TYPE
                           <span class="sort-icon">
                             <img src="/assets/img/SortIcon.svg" />
                           </span>
-                        </td>
-                        <td class="table-col actions-col">ACTIONS</td>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                    <tbody id="leaveRequestTableBody"></tbody>
-                  </table>
+                        </div>
+                        <div class="table-col-div actions-col-div">
+                          ACTIONS
+                          <span class="sort-icon">
+                            <img src="/assets/img/SortIcon.svg" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="leaveRequestTableBody"></div>
+                  </div>
                 </div>
                 <div class="component-footer">
-                  <p>Most popular day: Friday</p>
+                  <button class="pagination-btn prev-btn disabled" id="prevBtn">
+                    PREVIOUS
+                  </button>
+                  <div class="pagination">
+                    <span id="startRecordItem" class="start-record-item"
+                      >1</span
+                    >
+                    <span class="spaerate-record">-</span>
+                    <span id="endRecordItem" class="end-record-item">25</span>
+                    <span class="total-records">OF 232</span>
+                  </div>
+                  <button id="nextBtn" class="pagination-btn next-btn">
+                    NEXT
+                  </button>
+                  <!-- <p>Most popular day: Friday</p> -->
                 </div>
               </div>
             </div>
@@ -684,7 +702,7 @@
           </div>
           <div class="user-details-card">
             <div class="user-details-component">
-              <img src="/assets/img/User3Avatar.png" />
+              <img src="/assets/img/avatars/Nur.svg" />
               <div class="user-info-component">
                 <div class="user-info-row">
                   <label class="info-key">NAME</label>
@@ -813,7 +831,10 @@
           <div class="approval-level-card">
             <div class="approval-level-1-row">
               <span class="approval-indicator approval-pending"></span>
-              <img src="/assets/img/User1Avatar.svg" class="approver-avatar" />
+              <img
+                src="/assets/img/avatars/Simon.svg"
+                class="approver-avatar"
+              />
               <div class="approver-info-component">
                 <div class="approver-info-row">
                   <label class="approver-info-key">NAME</label>
@@ -834,15 +855,18 @@
             </div>
             <div class="approval-level-2-row">
               <span class="approval-indicator approval-pending"></span>
-              <img src="/assets/img/User2Avatar.png" class="approver-avatar" />
+              <img
+                src="/assets/img/avatars/Queenie.svg"
+                class="approver-avatar"
+              />
               <div class="approver-info-component">
                 <div class="approver-info-row">
                   <label class="approver-info-key">NAME</label>
-                  <label class="approver-info-value">Simon Minter</label>
+                  <label class="approver-info-value">Queenie Teoh</label>
                 </div>
                 <div class="approver-info-row">
                   <label class="approver-info-key">DESIGNATION</label>
-                  <label class="approver-info-value">Human Resources</label>
+                  <label class="approver-info-value">Head of UX Design</label>
                 </div>
                 <div class="approver-info-row">
                   <label class="approver-info-key">STATUS</label>
@@ -855,15 +879,18 @@
             </div>
             <div class="approval-level-3-row">
               <span class="approval-indicator approval-approved"></span>
-              <img src="/assets/img/User3Avatar.png" class="approver-avatar" />
+              <img
+                src="/assets/img/avatars/Charlie.svg"
+                class="approver-avatar"
+              />
               <div class="approver-info-component">
                 <div class="approver-info-row">
                   <label class="approver-info-key">NAME</label>
-                  <label class="approver-info-value">Simon Minter</label>
+                  <label class="approver-info-value">Charlie Kristen</label>
                 </div>
                 <div class="approver-info-row">
                   <label class="approver-info-key">DESIGNATION</label>
-                  <label class="approver-info-value">Human Resources</label>
+                  <label class="approver-info-value">Senior UX Designer</label>
                 </div>
                 <div class="approver-info-row">
                   <label class="approver-info-key">STATUS</label>

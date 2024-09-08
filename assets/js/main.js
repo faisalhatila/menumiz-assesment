@@ -85,7 +85,7 @@ closeRejectNotificationButton.addEventListener("click", () => {
 const leaveRequestData = [
     {
         id: 1,
-        userImage: '/assets/img/User2Avatar.png',
+        userImage: '/assets/img/avatars/Mark.svg',
         name: 'Mark Jacobs',
         period: [
             '31 Mar, 2023 09:00 AM', '31 Mar, 2023 18:00 PM'
@@ -96,7 +96,7 @@ const leaveRequestData = [
     },
     {
         id: 2,
-        userImage: '/assets/img/User1Avatar.svg',
+        userImage: '/assets/img/avatars/Charlie.svg',
         name: 'Charlie Kristen',
         period: [
             '10 Apr, 2023 09:00 AM', '11 Apr, 2023 18:00 PM'
@@ -107,7 +107,7 @@ const leaveRequestData = [
     },
     {
         id: 3,
-        userImage: '/assets/img/User2Avatar.png',
+        userImage: '/assets/img/avatars/Nur.svg',
         name: 'Nur Fariha binti Maslan',
         period: [
             '21 Apr, 2023 09:00 AM', '24 Apr, 2023 18:00 PM'
@@ -118,7 +118,7 @@ const leaveRequestData = [
     },
     {
         id: 4,
-        userImage: '/assets/img/User2Avatar.png',
+        userImage: '/assets/img/avatars/Nishant.svg',
         name: 'Nishant Talwar',
         period: [
             '31 Mar, 2023 09:00 AM', '31 Mar, 2023 18:00 PM'
@@ -129,7 +129,7 @@ const leaveRequestData = [
     },
     {
         id: 5,
-        userImage: '/assets/img/User1Avatar.svg',
+        userImage: '/assets/img/avatars/Simon.svg',
         name: 'Simon Minter',
         period: [
             '10 Apr, 2023 09:00 AM', '11 Apr, 2023 18:00 PM'
@@ -140,6 +140,8 @@ const leaveRequestData = [
     },
 ]
 
+
+// const filterIcon = document
 
 
 
@@ -191,8 +193,8 @@ const leaveRequestTableBody = document.getElementById('leaveRequestTableBody');
 // Loop through the data
 leaveRequestData.forEach((leave) => {
     // Create a new table row element
-    const tr = document.createElement('tr');
-    tr.className = 'table-body-row';
+    const div = document.createElement('div');
+    div.className = 'table-body-row-div';
 
     // Determine the row content based on the status
     if (leave.status === 'pending') {
@@ -201,27 +203,27 @@ leaveRequestData.forEach((leave) => {
         const rejectButtonId = `reject-btn-${leave.id}`;
         const toggleIconId = `toggleLeaveDetails-${leave.id}`; // Assign unique ID to the icon
 
-        tr.innerHTML = `
-            <td class="table-col check-col pending-request">
+        div.innerHTML = `
+            <div class="table-col-div check-col-div pending-request">
                 <input type="checkbox" />
-            </td>
-            <td class="table-col name-col">
+            </div>
+            <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
                 <label class="user-name">${leave.name}</label>
-            </td>
-            <td class="table-col period-col">
+            </div>
+            <div class="table-col-div period-col-div">
                 <span class="period-col-span">
                     <label>${leave.period[0]}</label>
                     <label>${leave.period[1]}</label>
                 </span>
-            </td>
-            <td class="table-col days-col">
+            </div>
+            <div class="table-col-div days-col-div">
                 <label>${leave.days}</label>
-            </td>
-            <td class="table-col leave-col">
+            </div>
+            <div class="table-col-div leave-col-div">
                 <label>${leave.leave_type}</label>
-            </td>
-            <td class="table-col actions-col">
+            </div>
+            <div class="table-col-div actions-col-div">
                 <span class="actions-col-span">
                     <span class="buttons-span">
                         <button class="reject" id="${rejectButtonId}">REJECT</button>
@@ -229,11 +231,11 @@ leaveRequestData.forEach((leave) => {
                     </span>
                     <img src="/assets/img/RightIcon.svg" style="cursor:pointer;" id="toggleLeaveDetails-${leave.id}" />
                 </span>
-            </td>
+            </div>
         `;
 
         // Append the row to the table body
-        leaveRequestTableBody.appendChild(tr);
+        leaveRequestTableBody.appendChild(div);
 
         // Add click event listener to the approve button
         document.getElementById(rejectButtonId).addEventListener('click', () => {
@@ -246,7 +248,7 @@ leaveRequestData.forEach((leave) => {
                 approveButton.remove();
                 buttonsSpan.classList.remove('buttons-span');
                 buttonsSpan.classList.add('rejected-buttons-span');
-                const checkColTd = tr.querySelector('.check-col');
+                const checkColTd = div.querySelector('.check-col-div');
                 checkColTd.classList.remove('pending-request');
                 checkColTd.classList.add('rejected-request');
                 showRejectToast(`${leave.name} ${leave.leave_type} Rejected!.`);
@@ -263,7 +265,7 @@ leaveRequestData.forEach((leave) => {
                 rejectButton.remove();
                 buttonsSpan.classList.remove('buttons-span');
                 buttonsSpan.classList.add('approved-buttons-span');
-                const checkColTd = tr.querySelector('.check-col');
+                const checkColTd = div.querySelector('.check-col-div');
                 checkColTd.classList.remove('pending-request');
                 checkColTd.classList.add('approved-request');
                 showApproveToast(`${leave.name} ${leave.leave_type} Approved!.`);
@@ -285,71 +287,71 @@ leaveRequestData.forEach((leave) => {
             }
         });
     } else if (leave.status === 'approved') {
-        tr.innerHTML = `
-            <td class="table-col check-col approved-request">
+        div.innerHTML = `
+            <div class="table-col-div check-col-div approved-request">
                 <input type="checkbox" />
-            </td>
-            <td class="table-col name-col">
+            </div>
+            <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
                 <label class="user-name">${leave.name}</label>
-            </td>
-            <td class="table-col period-col">
+            </div>
+            <div class="table-col-div period-col-div">
                 <span class="period-col-span">
                     <label>${leave.period[0]}</label>
                     <label>${leave.period[1]}</label>
                 </span>
-            </td>
-            <td class="table-col days-col">
+            </div>
+            <div class="table-col-div days-col-div">
                 <label>${leave.days}</label>
-            </td>
-            <td class="table-col leave-col">
+            </div>
+            <div class="table-col-div leave-col-div">
                 <label>${leave.leave_type}</label>
-            </td>
-            <td class="table-col actions-col">
+            </div>
+            <div class="table-col-div actions-col-div">
                 <span class="actions-col-span">
                     <span class="approved-buttons-span">
                         <button class="approve">APPROVED</button>
                     </span>
                     <img src="/assets/img/RightIcon.svg" style="cursor:pointer;" />
                 </span>
-            </td>
+            </div>
         `;
 
         // Append the row to the table body
-        leaveRequestTableBody.appendChild(tr);
+        leaveRequestTableBody.appendChild(div);
     } else {
-        tr.innerHTML = `
-            <td class="table-col check-col rejected-request">
+        div.innerHTML = `
+            <div class="table-col-div check-col-div rejected-request">
                 <input type="checkbox" />
-            </td>
-            <td class="table-col name-col">
+            </div>
+            <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
                 <label class="user-name">${leave.name}</label>
-            </td>
-            <td class="table-col period-col">
+            </div>
+            <div class="table-col-div period-col-div">
                 <span class="period-col-span">
                     <label>${leave.period[0]}</label>
                     <label>${leave.period[1]}</label>
                 </span>
-            </td>
-            <td class="table-col days-col">
+            </div>
+            <div class="table-col-div days-col-div">
                 <label>${leave.days}</label>
-            </td>
-            <td class="table-col leave-col">
+            </div>
+            <div class="table-col-div leave-col-div">
                 <label>${leave.leave_type}</label>
-            </td>
-            <td class="table-col actions-col">
+            </div>
+            <div class="table-col-div actions-col-div">
                 <span class="actions-col-span">
                     <span class="rejected-buttons-span">
                         <button class="reject">REJECTED</button>
                     </span>
                     <img src="/assets/img/RightIcon.svg" style="cursor:pointer;" />
                 </span>
-            </td>
+            </div>
         `;
 
         // Append the row to the table body
-        leaveRequestTableBody.appendChild(tr);
+        leaveRequestTableBody.appendChild(div);
     }
 });
 
@@ -416,3 +418,65 @@ modalOverlay.addEventListener('click', (e) => {
         closeModal();
     }
 });
+const paginationNextBtn = document.getElementById('nextBtn');
+const paginationPrevBtn = document.getElementById('prevBtn');
+const paginationStartRecordItem = document.getElementById('startRecordItem');
+const paginationEndRecordItem = document.getElementById('endRecordItem');
+let startRecordItem = 1;
+let endRecordItem = 25;
+const totalRecords = 227;
+const recordsPerPage = 25;
+
+// Update the pagination UI
+const updatePagination = () => {
+    paginationStartRecordItem.innerHTML = startRecordItem;
+    paginationEndRecordItem.innerHTML = endRecordItem;
+
+    // Disable the Next button if we reach or exceed totalRecords
+    if (endRecordItem >= totalRecords) {
+        paginationNextBtn.classList.add('disabled');
+        endRecordItem = totalRecords; // Ensure it doesn't go beyond totalRecords
+    } else {
+        paginationNextBtn.classList.remove('disabled');
+    }
+
+    // Disable the Previous button if we're at the first page
+    if (startRecordItem > 1) {
+        paginationPrevBtn.classList.remove('disabled');
+    } else {
+        paginationPrevBtn.classList.add('disabled');
+    }
+};
+
+// Next button event listener
+paginationNextBtn.addEventListener('click', () => {
+    if (endRecordItem < totalRecords) {
+        startRecordItem += recordsPerPage;
+        endRecordItem += recordsPerPage;
+
+        // Ensure endRecordItem doesn't exceed totalRecords
+        if (endRecordItem > totalRecords) {
+            endRecordItem = totalRecords;
+            // Ensure startRecordItem aligns with full pages if we are on the last page
+            startRecordItem = totalRecords - (totalRecords % recordsPerPage) + 1;
+        }
+    }
+    updatePagination();
+});
+
+// Previous button event listener
+paginationPrevBtn.addEventListener('click', () => {
+    if (startRecordItem > 1) {
+        startRecordItem -= recordsPerPage;
+        endRecordItem = startRecordItem + recordsPerPage - 1;
+
+        // Ensure startRecordItem doesn't go below 1
+        if (startRecordItem < 1) {
+            startRecordItem = 1;
+        }
+    }
+    updatePagination();
+});
+
+// Initialize pagination state on load
+updatePagination();

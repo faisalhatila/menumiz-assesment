@@ -71,14 +71,15 @@ body {
   padding: 8px 16px;
   width: 280px;
 }
-.top-bar .top-bar-content .actions-component .search-bar-component input[type=search] {
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=text] {
   background: transparent;
   border: none;
   margin-left: 18px;
   width: 100%;
+  color: #fff;
 }
-.top-bar .top-bar-content .actions-component .search-bar-component input[type=search]:focus {
-  outline: none;
+.top-bar .top-bar-content .actions-component .search-bar-component input[type=text]:focus {
+  outline: none !important;
 }
 .top-bar .top-bar-content .actions-component .filter-icon-component {
   margin: 0 16px;
@@ -189,11 +190,16 @@ body {
   align-items: center;
   list-style: none;
   padding: 0px;
+  cursor: pointer;
 }
 .page-content .main-content .tabs-row .tabs-list .tabs-list-item {
   margin-right: 12px;
   padding: 8px 8px 18px 8px;
   position: relative;
+  cursor: pointer;
+}
+.page-content .main-content .tabs-row .tabs-list .tabs-list-item label, .page-content .main-content .tabs-row .tabs-list .tabs-list-item img {
+  cursor: pointer;
 }
 .page-content .main-content .tabs-row .tabs-list .unread::after {
   content: "";
@@ -265,8 +271,8 @@ body {
   line-height: 100%; /* 15px */
   text-transform: uppercase;
 }
-.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component select:active {
-  outline: none;
+.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component select:focus {
+  outline: none !important;
 }
 .page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row {
   padding: 10px 16px 10px 24px;
@@ -392,7 +398,7 @@ body {
   line-height: 100%; /* 15px */
   text-transform: uppercase;
 }
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select:active {
+.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select:focus {
   outline: none;
 }
 .page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component {
@@ -558,7 +564,7 @@ body {
   line-height: 100%; /* 15px */
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select:active {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select:focus {
   outline: none;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row {
@@ -588,63 +594,70 @@ body {
   justify-content: space-between;
   padding: 10px 16px 10px 24px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div {
   min-width: 100%;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div {
   border-radius: 8px;
   background-color: #272727;
   padding: 12px 20px;
+  display: flex;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div div {
   padding: 10px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row td .sort-icon, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row td .sort-icon {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div div .sort-icon, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div div .sort-icon {
   margin-left: 10px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  width: 10%;
+  width: 70px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .check-col input[type=checkbox], .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .check-col input[type=checkbox] {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div input[type=checkbox], .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div input[type=checkbox] {
   margin-right: 10px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .rejected-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .rejected-request {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request {
   position: relative;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .pending-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .pending-request::after {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .pending-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .pending-request::after {
   position: absolute;
   content: "";
-  top: 25px;
+  top: 16px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #FFD928;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .approved-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .approved-request::after {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .approved-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .approved-request::after {
   position: absolute;
   content: "";
-  top: 25px;
+  top: 16px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: green;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .rejected-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .rejected-request::after {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request::after {
   position: absolute;
   content: "";
-  top: 25px;
+  top: 16px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: red;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div {
+  flex: 2;
   display: flex;
   align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .name-col .user-name, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .name-col .user-name {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div .user-name, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div .user-name {
   color: #FFF;
   font-family: Inter;
   font-size: 14px;
@@ -653,11 +666,14 @@ body {
   line-height: 20px;
   margin-left: 12px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .period-col .period-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .period-col .period-col-span {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div {
+  flex: 2;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span {
   display: flex;
   flex-direction: column;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .period-col .period-col-span label, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .period-col .period-col-span label {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span label, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span label {
   color: #FFF;
   font-family: Urbanist;
   font-size: 15.528px;
@@ -666,26 +682,33 @@ body {
   line-height: normal;
   letter-spacing: 0.776px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .days-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .days-col-div {
+  flex: 1;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .leave-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .leave-col-div {
+  flex: 1;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  flex: 3;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span {
   display: flex;
   align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
   cursor: pointer;
   width: 98px;
   height: 40px;
   border-radius: 20px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .reject {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject {
   border: solid 2px #898989;
   background-color: #1E1E1E;
   color: #FFF;
@@ -696,7 +719,7 @@ body {
   line-height: 140%; /* 21px */
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
   border: solid 2px #6E56E0;
   background-color: #6E56E0;
   color: #FFF;
@@ -708,18 +731,18 @@ body {
   text-transform: uppercase;
   margin-left: 8px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   min-width: 204px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
   width: 110px;
   height: 40px;
   border-radius: 20px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .approved-buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
   border: solid 2px #6E56E0;
   background-color: #6E56E0;
   color: #FFF;
@@ -731,13 +754,13 @@ body {
   text-transform: uppercase;
   margin-left: 8px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .rejected-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .rejected-buttons-span {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   min-width: 204px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-head-row .actions-col .actions-col-span .rejected-buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table .table-body-row .actions-col .actions-col-span .rejected-buttons-span .reject {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject {
   width: 110px;
   height: 40px;
   border-radius: 20px;
@@ -752,20 +775,34 @@ body {
   line-height: 140%; /* 21px */
   text-transform: uppercase;
 }
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div {
+  border-bottom: solid 2px #272727;
+}
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer {
   padding: 16px 16px 16px 24px;
-  border-top: solid 2px #272727;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer p {
-  margin: 0;
-  color: #898989;
-  text-align: center;
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .pagination-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .prev-btn, .page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .next-btn {
+  color: #fff;
   font-family: Urbanist;
-  font-size: 12px;
+  font-size: 13.587px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 12px */
-  text-align: left;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.679px;
+  text-transform: uppercase;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .disabled {
+  color: #898989 !important;
 }
 .page-content .main-content .leave-requests-component .component-row .most-day-away-component {
   background: #1E1E1E;
@@ -806,7 +843,7 @@ body {
   line-height: 100%; /* 15px */
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select:active {
+.page-content .main-content .leave-requests-component .component-row .most-day-away-component .header-row .drodowns-component select:focus {
   outline: none;
 }
 .page-content .main-content .leave-requests-component .component-row .most-day-away-component .data-component {

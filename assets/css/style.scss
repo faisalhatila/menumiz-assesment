@@ -67,14 +67,15 @@ body{
                 border-radius: 28px;
                 padding: 8px 16px;
                 width: 280px;
-                input[type=search] {
+                input[type=text] {
                     background: transparent;
                     border: none;
                     margin-left: 18px;
                     width: 100%;
+                    color: #fff;
                 }
-                input[type=search]:focus{
-                    outline: none;
+                input[type=text]:focus{
+                    outline: none !important;
                 }
             }
             .filter-icon-component{
@@ -186,10 +187,16 @@ body{
                 align-items: center;
                 list-style: none;
                 padding: 0px;
+                cursor: pointer;
                 .tabs-list-item{
                     margin-right: 12px;
                     padding: 8px 8px 18px 8px;
                     position: relative;
+                    cursor: pointer;
+                    label,img {
+                        cursor: pointer;
+
+                    }
                 }
                 .unread::after{
                         content:'';
@@ -258,8 +265,8 @@ body{
                                 line-height: 100%; /* 15px */
                                 text-transform: uppercase;
                             }
-                            select:active{
-                                outline: none;
+                            select:focus{
+                                outline: none !important;
                             }
                         }
                     }
@@ -387,7 +394,7 @@ body{
                                 line-height: 100%; /* 15px */
                                 text-transform: uppercase;
                             }
-                            select:active{
+                            select:focus{
                                 outline: none;
                             }
                         }
@@ -555,7 +562,7 @@ body{
                                 line-height: 100%; /* 15px */
                                 text-transform: uppercase;
                             }
-                            select:active{
+                            select:focus{
                                 outline: none;
                             }
                         }
@@ -587,25 +594,29 @@ body{
                         display: flex;
                         justify-content: space-between;
                         padding: 10px 16px 10px 24px;
-                        .leave-requests-table{
+                        .leave-requests-table-div{
                             min-width: 100%;
-                            .table-head-row {
+                            .table-head-row-div {
                                 border-radius: 8px;
                                 background-color: #272727;
                                 padding: 12px 20px;
+                                display: flex;
     
                             }
-                            .table-head-row,.table-body-row{
-                                td {
+                            .table-head-row-div,.table-body-row-div{
+                                display: flex;
+                                align-items: center;
+                                padding: 12px 20px;
+                                div {
                                     padding: 10px;
                                     .sort-icon {
                                         margin-left: 10px;
                                     }
                                 }
-                                .check-col{
+                                .check-col-div{
                                     border-top-left-radius: 20px;
                                     border-bottom-left-radius: 20px;
-                                    width: 10%;
+                                    width: 70px;
                                     input[type=checkbox] {
                                         margin-right: 10px;
                                     }
@@ -616,7 +627,7 @@ body{
                                 .pending-request::after{
                                     position: absolute;
                                     content: '';
-                                    top: 25px;
+                                    top: 16px;
                                     width: 8px;
                                     height: 8px;
                                     border-radius: 50%;
@@ -625,7 +636,7 @@ body{
                                 .approved-request::after{
                                     position: absolute;
                                     content: '';
-                                    top: 25px;
+                                    top: 16px;
                                     width: 8px;
                                     height: 8px;
                                     border-radius: 50%;
@@ -634,14 +645,15 @@ body{
                                 .rejected-request::after{
                                     position: absolute;
                                     content: '';
-                                    top: 25px;
+                                    top: 16px;
                                     width: 8px;
                                     height: 8px;
                                     border-radius: 50%;
                                     background: red;
                                 }
-                                .name-col{
+                                .name-col-div{
                                     // width: 30%;
+                                    flex: 2;
                                     display: flex;
                                     align-items: center;
                                     .user-name{
@@ -654,7 +666,8 @@ body{
                                         margin-left: 12px;
                                     }
                                 }
-                                .period-col{
+                                .period-col-div{
+                                    flex: 2;
                                     // width: 30%;
                                     .period-col-span{
                                         display: flex;
@@ -669,15 +682,18 @@ body{
                                         letter-spacing: 0.776px;  
                                     }}
                                 }
-                                .days-col{
+                                .days-col-div{
                                     // width: 10%;
+                                    flex: 1;
                                 }
-                                .leave-col{
+                                .leave-col-div{
                                     // width: 15%;
+                                    flex: 1;
                                 }
-                                .actions-col{
+                                .actions-col-div{
                                     border-top-right-radius: 20px;
                                     border-bottom-right-radius: 20px;
+                                    flex: 3;
                                     // width: 35%;
                                     .actions-col-span{
                                         display: flex;
@@ -763,22 +779,49 @@ body{
                                     }
                                 }
                             }
+                            .table-body-row-div{
+                                border-bottom: solid 2px #272727;
+                            }
                         }
                     }
                     .component-footer{
                         padding: 16px 16px 16px 24px;
-                        border-top: solid 2px #272727;
-                        p {
-                            margin: 0;
-                            color: #898989;
-                            text-align: center;
-                            font-family: Urbanist;
-                            font-size: 12px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 100%; /* 12px */
-                            text-align: left;
+                        // border-top: solid 2px #272727;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .pagination-btn{
+                            background-color: rgba(255,255,255,0.08);
+                            border: none;
+                            padding: 10px;
+                            border-radius: 8px;
+                            cursor: pointer;
                         }
+                        .prev-btn,.next-btn {
+                            // color: var(--Gray-Main, #898989);
+                            color: #fff;
+                            font-family: Urbanist;
+                            font-size: 13.587px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            letter-spacing: 0.679px;
+                            text-transform: uppercase;
+                        }
+                        .disabled {
+                            color: #898989 !important;
+                        }
+                        // p {
+                        //     margin: 0;
+                        //     color: #898989;
+                        //     text-align: center;
+                        //     font-family: Urbanist;
+                        //     font-size: 12px;
+                        //     font-style: normal;
+                        //     font-weight: 400;
+                        //     line-height: 100%; /* 12px */
+                        //     text-align: left;
+                        // }
                     }
                 }
                 .most-day-away-component{
@@ -817,7 +860,7 @@ body{
                                 line-height: 100%; /* 15px */
                                 text-transform: uppercase;
                             }
-                            select:active{
+                            select:focus{
                                 outline: none;
                             }
                         }

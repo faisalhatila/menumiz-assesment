@@ -1245,6 +1245,13 @@ body {
   background: transparent;
   margin-right: 8px;
 }
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .read-message {
+  color: #898989 !important;
+  font-weight: 400 !important;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .read-message .user-name {
+  font-weight: 400 !important;
+}
 .page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .notification-time {
   color: #ccc;
   font-family: Inter;
@@ -1253,6 +1260,9 @@ body {
   font-weight: 500;
   line-height: 20px;
   background: transparent;
+}
+.page-content .main-content .notifications-component .notifications-list .notifications-list-item .notifications-content-component .read-time {
+  color: #697386 !important;
 }
 .page-content .main-content .leave-deatils-component {
   width: 464px;

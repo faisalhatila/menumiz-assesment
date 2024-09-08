@@ -1272,6 +1272,13 @@ body{
                                 margin-right: 8px;
                             }
                         }
+                        .read-message {
+                            color: #898989 !important;
+                            font-weight: 400 !important;
+                            .user-name{
+                                font-weight: 400 !important;
+                            }
+                        }
                         .notification-time{
                             color: #ccc;
                             font-family: Inter;
@@ -1280,6 +1287,9 @@ body{
                             font-weight: 500;
                             line-height: 20px;
                             background: transparent
+                        }
+                        .read-time {
+                            color: #697386 !important;
                         }
                     }
                 }

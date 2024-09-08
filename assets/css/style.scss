@@ -617,8 +617,34 @@ body{
                                     border-top-left-radius: 20px;
                                     border-bottom-left-radius: 20px;
                                     width: 70px;
-                                    input[type=checkbox] {
+                                    display: flex;
+                                    align-items: center;
+                                    // input[type=checkbox] {
+                                    //     margin-right: 10px;
+                                    // }
+                                    .custom-checkbox {
+                                        width: 20px;
+                                        height: 20px;
+                                        appearance: none; /* Remove default checkbox style */
+                                        border: 2px solid #fff; /* Border color */
+                                        background-color: transparent; /* Transparent background when unchecked */
+                                        cursor: pointer;
+                                        position: relative;
+                                        border-radius: 4px;
                                         margin-right: 10px;
+                                    }
+                                    
+                                    .custom-checkbox:checked {
+                                        background-color: #6E56E0; /* Background color when checked */
+                                        border: 2px solid #6E56E0; /* Border color */
+                                    }
+                                    .custom-checkbox:checked::after {
+                                        content: '✔'; /* Checkmark */
+                                        color: white;  /* Checkmark color */
+                                        font-size: 14px;
+                                        position: absolute;
+                                        top: 0px;
+                                        left: 2px;
                                     }
                                 }
                                 .pending-request,.approved-request,.rejected-request{
@@ -627,7 +653,8 @@ body{
                                 .pending-request::after{
                                     position: absolute;
                                     content: '';
-                                    top: 16px;
+                                    top: 19px;
+                                    left: 40px;
                                     width: 8px;
                                     height: 8px;
                                     border-radius: 50%;
@@ -636,7 +663,8 @@ body{
                                 .approved-request::after{
                                     position: absolute;
                                     content: '';
-                                    top: 16px;
+                                    top: 19px;
+                                    left: 40px;
                                     width: 8px;
                                     height: 8px;
                                     border-radius: 50%;
@@ -645,7 +673,8 @@ body{
                                 .rejected-request::after{
                                     position: absolute;
                                     content: '';
-                                    top: 16px;
+                                    top: 19px;
+                                    left: 40px;
                                     width: 8px;
                                     height: 8px;
                                     border-radius: 50%;

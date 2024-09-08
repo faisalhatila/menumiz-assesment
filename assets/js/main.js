@@ -205,7 +205,7 @@ leaveRequestData.forEach((leave) => {
 
         div.innerHTML = `
             <div class="table-col-div check-col-div pending-request">
-                <input type="checkbox" />
+                <input type="checkbox" class="custom-checkbox" />
             </div>
             <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
@@ -289,7 +289,7 @@ leaveRequestData.forEach((leave) => {
     } else if (leave.status === 'approved') {
         div.innerHTML = `
             <div class="table-col-div check-col-div approved-request">
-                <input type="checkbox" />
+                <input type="checkbox" class="custom-checkbox" />
             </div>
             <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
@@ -322,7 +322,7 @@ leaveRequestData.forEach((leave) => {
     } else {
         div.innerHTML = `
             <div class="table-col-div check-col-div rejected-request">
-                <input type="checkbox" />
+                <input type="checkbox" class="custom-checkbox" />
             </div>
             <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />

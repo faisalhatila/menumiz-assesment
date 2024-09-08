@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
@@ -618,9 +619,33 @@ body {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 70px;
+  display: flex;
+  align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div input[type=checkbox], .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div input[type=checkbox] {
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* Remove default checkbox style */
+  border: 2px solid #fff; /* Border color */
+  background-color: transparent; /* Transparent background when unchecked */
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
   margin-right: 10px;
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked {
+  background-color: #6E56E0; /* Background color when checked */
+  border: 2px solid #6E56E0; /* Border color */
+}
+.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked::after {
+  content: "✔"; /* Checkmark */
+  color: white; /* Checkmark color */
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 2px;
 }
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request {
   position: relative;
@@ -628,7 +653,8 @@ body {
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .pending-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .pending-request::after {
   position: absolute;
   content: "";
-  top: 16px;
+  top: 19px;
+  left: 40px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -637,7 +663,8 @@ body {
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .approved-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .approved-request::after {
   position: absolute;
   content: "";
-  top: 16px;
+  top: 19px;
+  left: 40px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -646,7 +673,8 @@ body {
 .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request::after {
   position: absolute;
   content: "";
-  top: 16px;
+  top: 19px;
+  left: 40px;
   width: 8px;
   height: 8px;
   border-radius: 50%;

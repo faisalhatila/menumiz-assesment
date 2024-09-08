@@ -258,7 +258,7 @@
               </div>
             </div>
           </div>
-          <div class="leave-requests-component">
+          <div id="leaveRequestsComponent" class="leave-requests-component">
             <div class="component-title-row">
               <h1 class="component-title">Leave Requests</h1>
               <div class="request-view-type-buttons-component">
@@ -269,13 +269,17 @@
               </div>
             </div>
             <div class="component-row">
-              <div class="heatmap-component">
+              <div class="leave-requests-component" id="leaveRequestsComponent">
                 <div class="data-row">
                   <div id="leaveRequestsTable" class="leave-requests-table-div">
                     <div class="table-head-div">
                       <div class="table-head-row-div">
                         <div class="table-col-div check-col-div">
-                          <input type="checkbox" class="custom-checkbox" />#
+                          <input
+                            id="tableHeaderCheckbox"
+                            type="checkbox"
+                            class="custom-checkbox"
+                          />#
                           <span class="sort-icon">
                             <img src="/assets/img/SortIcon.svg" />
                           </span>
@@ -967,10 +971,6 @@
         ></p>
       </div>
     </div>
-    <!-- <div style="display: none" class="modal-overlay"></div> -->
-    <!-- <div class="modal-overlay">
-      <div class="modal-content"></div>
-    </div> -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal-content">
         <div class="modal-header">
@@ -984,7 +984,17 @@
         </div>
       </div>
     </div>
-
+    <div
+      id="totalCheckedRequests"
+      style="display: none"
+      class="main-conditional-footer"
+    >
+      <span>TOTAL : <label id="totalCount"></label></span>
+      <div class="actions-div">
+        <button class="reject" id="rejectTotalCheckRequest">REJECT</button>
+        <button class="approve" id="approveeTotalCheckRequest">APPROVE</button>
+      </div>
+    </div>
     <script type="text/javascript" src="/assets/js/main.js"></script>
   </body>
 </html>

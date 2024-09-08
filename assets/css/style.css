@@ -526,20 +526,20 @@ body {
   align-items: flex-start;
   gap: 18px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component {
   background: #1E1E1E;
   flex: 1;
   border-radius: 8px;
   overflow: hidden;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row {
   background: transparent;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 2px #272727;
   padding: 16px 16px 10px 24px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .component-title {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .component-title {
   color: #FFF;
   text-align: center;
   font-family: Urbanist;
@@ -549,11 +549,11 @@ body {
   line-height: 100%;
   margin: 0px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .drodowns-component {
   display: flex;
   align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .drodowns-component select {
   background-color: transparent;
   border: none;
   color: #898989;
@@ -565,14 +565,14 @@ body {
   line-height: 100%; /* 15px */
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .header-row .drodowns-component select:focus {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .header-row .drodowns-component select:focus {
   outline: none;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row {
   padding: 10px 16px 10px 24px;
   overflow: hidden;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row .days-list {
   display: flex;
   list-style: none;
   border: solid 1px #272727;
@@ -580,49 +580,49 @@ body {
   overflow: hidden;
   padding: 0px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list .day-list-item {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row .days-list .day-list-item {
   flex: 1;
   border-right: solid 1px #272727;
   padding: 10px;
   text-align: center;
   cursor: pointer;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .week-days-row .days-list .active-day {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .week-days-row .days-list .active-day {
   background: #C33535;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row {
   display: flex;
   justify-content: space-between;
   padding: 10px 16px 10px 24px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div {
   min-width: 100%;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div {
   border-radius: 8px;
   background-color: #272727;
   padding: 12px 20px;
   display: flex;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div {
   display: flex;
   align-items: center;
   padding: 12px 20px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div div {
   padding: 10px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div div .sort-icon, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div div .sort-icon {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div div .sort-icon, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div div .sort-icon {
   margin-left: 10px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 70px;
   display: flex;
   align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox {
   width: 20px;
   height: 20px;
   -webkit-appearance: none;
@@ -635,11 +635,15 @@ body {
   border-radius: 4px;
   margin-right: 10px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .disabled, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .disabled {
+  border: 2px solid #888 !important;
+  cursor: no-drop;
+}
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked {
   background-color: #6E56E0; /* Background color when checked */
   border: 2px solid #6E56E0; /* Border color */
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked::after {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .check-col-div .custom-checkbox:checked::after, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .check-col-div .custom-checkbox:checked::after {
   content: "✔"; /* Checkmark */
   color: white; /* Checkmark color */
   font-size: 14px;
@@ -647,10 +651,10 @@ body {
   top: 0px;
   left: 2px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .pending-request, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .approved-request, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request {
   position: relative;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .pending-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .pending-request::after {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .pending-request::after, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .pending-request::after {
   position: absolute;
   content: "";
   top: 19px;
@@ -660,7 +664,7 @@ body {
   border-radius: 50%;
   background: #FFD928;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .approved-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .approved-request::after {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .approved-request::after, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .approved-request::after {
   position: absolute;
   content: "";
   top: 19px;
@@ -670,7 +674,7 @@ body {
   border-radius: 50%;
   background: green;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request::after, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request::after {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .rejected-request::after, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .rejected-request::after {
   position: absolute;
   content: "";
   top: 19px;
@@ -680,12 +684,12 @@ body {
   border-radius: 50%;
   background: red;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div {
   flex: 2;
   display: flex;
   align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div .user-name, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div .user-name {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div .user-name, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div .user-name {
   color: #FFF;
   font-family: Inter;
   font-size: 14px;
@@ -694,14 +698,14 @@ body {
   line-height: 20px;
   margin-left: 12px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div {
   flex: 2;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span {
   display: flex;
   flex-direction: column;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span label, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span label {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .period-col-div .period-col-span label, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .period-col-div .period-col-span label {
   color: #FFF;
   font-family: Urbanist;
   font-size: 15.528px;
@@ -710,33 +714,33 @@ body {
   line-height: normal;
   letter-spacing: 0.776px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .days-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .days-col-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .days-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .days-col-div {
   flex: 1;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .leave-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .leave-col-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .leave-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .leave-col-div {
   flex: 1;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   flex: 3;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span {
   display: flex;
   align-items: center;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
   cursor: pointer;
   width: 98px;
   height: 40px;
   border-radius: 20px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .reject {
   border: solid 2px #898989;
   background-color: #1E1E1E;
   color: #FFF;
@@ -747,7 +751,7 @@ body {
   line-height: 140%; /* 21px */
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .buttons-span .approve {
   border: solid 2px #6E56E0;
   background-color: #6E56E0;
   color: #FFF;
@@ -759,18 +763,18 @@ body {
   text-transform: uppercase;
   margin-left: 8px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   min-width: 204px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
   width: 110px;
   height: 40px;
   border-radius: 20px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .approved-buttons-span .approve {
   border: solid 2px #6E56E0;
   background-color: #6E56E0;
   color: #FFF;
@@ -782,13 +786,13 @@ body {
   text-transform: uppercase;
   margin-left: 8px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   min-width: 204px;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .actions-col-div .actions-col-span .rejected-buttons-span .reject {
   width: 110px;
   height: 40px;
   border-radius: 20px;
@@ -803,23 +807,23 @@ body {
   line-height: 140%; /* 21px */
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .data-row .leave-requests-table-div .table-body-row-div {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div {
   border-bottom: solid 2px #272727;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer {
   padding: 16px 16px 16px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .pagination-btn {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .pagination-btn {
   background-color: rgba(255, 255, 255, 0.08);
   border: none;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .prev-btn, .page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .next-btn {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .prev-btn, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .next-btn {
   color: #fff;
   font-family: Urbanist;
   font-size: 13.587px;
@@ -829,7 +833,7 @@ body {
   letter-spacing: 0.679px;
   text-transform: uppercase;
 }
-.page-content .main-content .leave-requests-component .component-row .heatmap-component .component-footer .disabled {
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .component-footer .disabled {
   color: #898989 !important;
 }
 .page-content .main-content .leave-requests-component .component-row .most-day-away-component {
@@ -1776,4 +1780,50 @@ body {
   margin: 0 20px 0 15px;
   width: 130px;
   height: 40px;
+}
+
+.main-conditional-footer {
+  position: fixed;
+  background-color: #272727;
+  width: calc(100% - 30px);
+  padding: 16px;
+  color: #fff;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-conditional-footer .actions-div {
+  display: flex;
+  align-items: center;
+}
+.main-conditional-footer .actions-div .reject, .main-conditional-footer .actions-div .approve {
+  cursor: pointer;
+  width: 98px;
+  height: 40px;
+  border-radius: 20px;
+}
+.main-conditional-footer .actions-div .reject {
+  border: solid 2px #898989;
+  background-color: #1E1E1E;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+}
+.main-conditional-footer .actions-div .approve {
+  border: solid 2px #6E56E0;
+  background-color: #6E56E0;
+  color: #FFF;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 21px */
+  text-transform: uppercase;
+  margin-left: 8px;
 }/*# sourceMappingURL=style.css.map */

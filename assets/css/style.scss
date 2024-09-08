@@ -526,7 +526,7 @@ body{
                 display: flex;
                 align-items: flex-start;
                 gap: 18px;
-                .heatmap-component{
+                .leave-requests-component{
                     background: #1E1E1E;
                     flex: 1;
                     border-radius: 8px;
@@ -632,6 +632,10 @@ body{
                                         position: relative;
                                         border-radius: 4px;
                                         margin-right: 10px;
+                                    }
+                                    .disabled {
+                                        border: 2px solid #888 !important;
+                                        cursor: no-drop;
                                     }
                                     
                                     .custom-checkbox:checked {
@@ -1854,4 +1858,50 @@ body{
     margin: 0 20px 0 15px;
     width: 130px;
     height: 40px;
+  }
+
+  .main-conditional-footer{
+    position: fixed;
+    background-color: #272727;
+    width: calc(100% - 30px);
+    padding: 16px;
+    color: #fff;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .actions-div{
+        display: flex;
+        align-items: center;
+        .reject,.approve {
+            cursor: pointer;
+            width: 98px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        .reject {
+            border: solid 2px #898989;
+            background-color: #1E1E1E;
+            color:#FFF;
+            font-family: Urbanist;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 21px */
+            text-transform: uppercase;
+        }
+        .approve{
+            border: solid 2px #6E56E0;
+            background-color: #6E56E0;
+            color:#FFF;
+            font-family: Urbanist;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 21px */
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+    }
   }

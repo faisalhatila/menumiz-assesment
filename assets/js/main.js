@@ -199,13 +199,13 @@ leaveRequestData.forEach((leave) => {
     // Determine the row content based on the status
     if (leave.status === 'pending') {
         // Assign a dynamic ID to the approve button using the leave request's ID
-        const approveButtonId = `approve-btn-${leave.id}`;
-        const rejectButtonId = `reject-btn-${leave.id}`;
+        const approveButtonId = `approveBtn-${leave.id}`;
+        const rejectButtonId = `rejectBtn-${leave.id}`;
         const toggleIconId = `toggleLeaveDetails-${leave.id}`; // Assign unique ID to the icon
-
+        const checkBoxId = `checkBox-${leave.id}`; // Assign unique ID to the icon
         div.innerHTML = `
             <div class="table-col-div check-col-div pending-request">
-                <input type="checkbox" class="custom-checkbox" />
+                <input id="${checkBoxId}" type="checkbox" class="custom-checkbox" />
             </div>
             <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
@@ -289,7 +289,7 @@ leaveRequestData.forEach((leave) => {
     } else if (leave.status === 'approved') {
         div.innerHTML = `
             <div class="table-col-div check-col-div approved-request">
-                <input type="checkbox" class="custom-checkbox" />
+                <input type="checkbox" disabled class="custom-checkbox disabled" />
             </div>
             <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
@@ -322,7 +322,7 @@ leaveRequestData.forEach((leave) => {
     } else {
         div.innerHTML = `
             <div class="table-col-div check-col-div rejected-request">
-                <input type="checkbox" class="custom-checkbox" />
+                <input type="checkbox" disabled class="custom-checkbox disabled" />
             </div>
             <div class="table-col-div name-col-div">
                 <img src="${leave.userImage}" />
@@ -480,3 +480,101 @@ paginationPrevBtn.addEventListener('click', () => {
 
 // Initialize pagination state on load
 updatePagination();
+
+
+// Get the elements to manipulate
+const tableHeaderCheckbox = document.getElementById('tableHeaderCheckbox');
+const totalCheckedRequests = document.getElementById('totalCheckedRequests');
+const leaveRequestsComponent = document.getElementById('leaveRequestsComponent');
+const totalCount = document.getElementById('totalCount');
+
+// Function to check/uncheck all checkboxes
+function toggleAllCheckboxes(state) {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][id*="checkBox-"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = state;
+    });
+    // Log the number of checked checkboxes
+    logCheckedCount();
+    updateElementStyles();
+}
+
+// Function to count checked checkboxes
+function countCheckedCheckboxes() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][id*="checkBox-"]');
+    return Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+}
+
+// Function to log the number of checked checkboxes
+function logCheckedCount() {
+    const checkedCount = countCheckedCheckboxes();
+    console.log(`Number of checked checkboxes: ${checkedCount}`);
+    return checkedCount; // Return the count to use in updating the element
+}
+
+// Function to update the styles of totalCheckedRequests and leaveRequestsComponent
+function updateElementStyles() {
+    const checkedCount = logCheckedCount(); // Get the checked count
+
+    // Update the inner HTML of totalCount with the checked count
+    totalCount.innerHTML = checkedCount;
+
+    if (checkedCount > 0) {
+        totalCheckedRequests.style.display = ''; // Show the element
+        leaveRequestsComponent.style.marginBottom = '100px'; // Set margin bottom
+    } else {
+        totalCheckedRequests.style.display = 'none'; // Hide the element
+        leaveRequestsComponent.style.marginBottom = '0'; // Remove margin bottom
+    }
+}
+
+// Function to reset everything to its original state
+function resetState() {
+    tableHeaderCheckbox.checked = false;
+    const individualCheckboxes = document.querySelectorAll('input[type="checkbox"][id*="checkBox-"]');
+    individualCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+    totalCheckedRequests.style.display = 'none';
+    leaveRequestsComponent.style.marginBottom = '0';
+    totalCount.innerHTML = '0';
+}
+
+// Add event listener to the main checkbox
+tableHeaderCheckbox.addEventListener('change', function () {
+    toggleAllCheckboxes(tableHeaderCheckbox.checked);
+    // Also log the count and update the styles after toggling all checkboxes
+    updateElementStyles();
+});
+
+// Add event listeners to individual checkboxes
+const individualCheckboxes = document.querySelectorAll('input[type="checkbox"][id*="checkBox-"]');
+individualCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+        // Check if all individual checkboxes are checked
+        const allChecked = Array.from(individualCheckboxes).every(cb => cb.checked);
+
+        // If all are checked, check the main checkbox
+        // Otherwise, uncheck it
+        tableHeaderCheckbox.checked = allChecked;
+
+        // Log the number of checked checkboxes and update the styles
+        updateElementStyles();
+    });
+});
+
+// Add event listeners to all elements with the class closeTotalCheckRequest
+const closeButtons = document.querySelectorAll('.closeTotalCheckRequest');
+const closeButton1 = document.getElementById('rejectTotalCheckRequest');
+const closeButton2 = document.getElementById('approveeTotalCheckRequest');
+// closeButtons.forEach(button => {
+//     button.addEventListener('click', function () {
+//         resetState();
+//     });
+// });
+closeButton1.addEventListener('click', () => {
+    resetState();
+})
+closeButton2.addEventListener('click', () => {
+    resetState();
+})

@@ -116,6 +116,10 @@ body {
 .top-bar .top-bar-content .actions-component .account-action-component {
   margin: 0 0 0 16px;
 }
+.top-bar .top-bar-content .actions-component .account-action-component img {
+  width: 40px;
+  border-radius: 50%;
+}
 
 .page-content {
   display: flex;
@@ -192,299 +196,10 @@ body {
   width: calc(100vw - 272px);
   margin-left: 272px;
 }
-.page-content .main-content .tabs-row {
-  display: flex;
-  align-items: center;
-  top: 82px;
-  position: fixed;
-  background: #151515;
-  width: calc(100% - 342px);
-  z-index: 1;
-}
-.page-content .main-content .tabs-row .tabs-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0px;
-  cursor: pointer;
-}
-.page-content .main-content .tabs-row .tabs-list .tabs-list-item {
-  margin-right: 12px;
-  padding: 8px 8px 18px 8px;
-  position: relative;
-  cursor: pointer;
-}
-.page-content .main-content .tabs-row .tabs-list .tabs-list-item label, .page-content .main-content .tabs-row .tabs-list .tabs-list-item img {
-  cursor: pointer;
-}
-.page-content .main-content .tabs-row .tabs-list .unread::after {
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #FFD928;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-.page-content .main-content .tabs-row .tabs-list .active {
-  border-bottom: solid 2px #6E56E0 !important;
-}
 .page-content .main-content .dashboard-component {
   display: flex;
   flex-direction: column;
-  margin-top: 140px;
-}
-.page-content .main-content .dashboard-component .component-title {
-  color: #FFF;
-  font-family: Urbanist;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 125%;
-}
-.page-content .main-content .dashboard-component .component-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component {
-  background: #1E1E1E;
-  flex: 1;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row {
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid 2px #272727;
-  padding: 16px 16px 10px 24px;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .component-title {
-  color: #FFF;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  margin: 0px;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component {
-  display: flex;
-  align-items: center;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component select {
-  background-color: transparent;
-  border: none;
-  color: #898989;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 15px */
-  text-transform: uppercase;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .header-row .drodowns-component select:focus {
-  outline: none !important;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row {
-  padding: 10px 16px 10px 24px;
-  overflow: hidden;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list {
-  display: flex;
-  list-style: none;
-  border: solid 1px #272727;
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 0px;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list .day-list-item {
-  flex: 1;
-  border-right: solid 1px #272727;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .week-days-row .days-list .active-day {
-  background: #C33535;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 16px 10px 24px;
-  min-height: 205px;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .indicator-name {
-  margin: 0px;
-  color: #FFF;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 15px */
-  text-transform: capitalize;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress .inner-circle {
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .data-row .data-indicator-wrapper .circular-progress .percentage {
-  position: relative;
-  color: #FFF !important;
-  text-align: center;
-  font-family: Urbanist !important;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 30px */
-  text-transform: capitalize;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .component-footer {
-  padding: 16px 16px 16px 24px;
-  border-top: solid 2px #272727;
-}
-.page-content .main-content .dashboard-component .component-row .heatmap-component .component-footer p {
-  margin: 0;
-  color: #898989;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 12px */
-  text-align: left;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component {
-  background: #1E1E1E;
-  flex: 1;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row {
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid 2px #272727;
-  padding: 16px 16px 10px 24px;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .component-title {
-  color: #FFF;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  margin: 0px;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component {
-  display: flex;
-  align-items: center;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select {
-  background-color: transparent;
-  border: none;
-  color: #898989;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 15px */
-  text-transform: uppercase;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .header-row .drodowns-component select:focus {
-  outline: none;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component {
-  min-height: 298px;
-  padding: 10px 16px 10px 24px;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list {
-  list-style: none;
-  padding: 0px;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .user-name-pic .user-name {
-  margin: 0px;
-  overflow: hidden;
-  color: #898989;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .data-component .most-day-away-list .most-day-away-list-item .away-days-info {
-  color: #FFF;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .component-footer {
-  padding: 16px 16px 16px 24px;
-  border-top: solid 2px #272727;
-}
-.page-content .main-content .dashboard-component .component-row .most-day-away-component .component-footer p {
-  margin: 0;
-  color: #898989;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 12px */
-  text-align: left;
-}
-.page-content .main-content .dashboard-component .component-row .avatar-component {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.page-content .main-content .dashboard-component .component-row .avatar-component::after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #FFD928;
-  position: absolute;
-  top: 0px;
-  right: -20px;
+  margin-top: 80px;
 }
 .page-content .main-content .leave-requests-component {
   display: flex;
@@ -501,40 +216,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 125%;
-}
-.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view, .page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
-  cursor: pointer;
-  border: none;
-  color: #898989;
-  font-family: Urbanist;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%; /* 21px */
-  background: #272727;
-  width: 120px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .list-view {
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-}
-.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .month-view {
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-.page-content .main-content .leave-requests-component .component-title-row .request-view-type-buttons-component .active {
-  color: #FFF !important;
-  font-weight: 700 !important;
-  background: #6E56E0 !important;
 }
 .page-content .main-content .leave-requests-component .component-row {
   display: flex;
@@ -705,6 +386,10 @@ body {
   align-items: center;
   font-size: 0.8em;
 }
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div .emp-avatar, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div .emp-avatar {
+  width: 40px;
+  border-radius: 50%;
+}
 .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .name-col-div .user-name, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .name-col-div .user-name {
   color: #FFF;
   font-family: Inter;
@@ -734,6 +419,15 @@ body {
 .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .days-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .days-col-div {
   flex: 1;
   font-size: 0.8em;
+}
+.page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .days-col-div .user-name, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .days-col-div .user-name {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 12px;
 }
 .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-head-row-div .leave-col-div, .page-content .main-content .leave-requests-component .component-row .leave-requests-component .data-row .leave-requests-table-div .table-body-row-div .leave-col-div {
   font-size: 0.8em;
@@ -1687,99 +1381,6 @@ body {
   margin: 0px 10px;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth transition */
-}
-
-.modal-content {
-  background: #1E1E1E;
-  padding: 20px;
-  height: 266px;
-  border-radius: 12px;
-  width: 600px;
-  transform: translateY(-30px); /* Start the content a bit higher */
-  transition: transform 0.4s ease; /* Transition for sliding down */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.modal-content .modal-header {
-  border-bottom: solid 2px #272727;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.modal-content .modal-header .modal-title {
-  color: #FFF;
-  font-family: Urbanist;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 125%;
-}
-.modal-content .modal-message {
-  color: #FFF;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 36px;
-}
-.modal-content .modal-footer {
-  border-top: solid 2px #272727;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.modal-content .modal-footer .no-btn, .modal-content .modal-footer .yes-btn {
-  width: 88px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: var(--White, #FFF);
-  font-family: Urbanist;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 21px */
-  text-transform: uppercase;
-  border-radius: 20px;
-}
-.modal-content .modal-footer .no-btn {
-  border: solid 2px #898989;
-  background: #1E1E1E;
-}
-.modal-content .modal-footer .yes-btn {
-  background: #6E56E0;
-  border: solid 2px #6E56E0;
-}
-
-/* Show modal with smooth fade-in */
-.modal-overlay.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-overlay.show .modal-content {
-  transform: translateY(0); /* Slide modal content into place */
-}
-
 /* Blur the content behind the modal */
 .page-content {
   transition: filter 0.4s ease; /* Smooth blur transition */
@@ -1856,4 +1457,4 @@ body {
   line-height: 140%; /* 21px */
   text-transform: uppercase;
   margin-left: 8px;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=employees.css.map */
